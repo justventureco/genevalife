@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { GenevaButton } from "@/components/ui/GenevaButton";
-import { GenevaWordmark } from "@/components/geneva/HexLogo";
 import { cn } from "@/lib/utils";
+import genevaLogo from "@/assets/geneva-logo-inverted.png";
 
 const links = [
   { label: "Who We Are", href: "#who-we-are" },
-  { label: "Approach", href: "#approach" },
+  { label: "Our Approach", href: "#approach" },
   { label: "Who We Serve", href: "#who-we-serve" },
   { label: "Why Geneva", href: "#why-geneva" },
   { label: "What's Next", href: "#whats-next" },
 ];
+
 
 export function Navigation() {
   const [open, setOpen] = useState(false);

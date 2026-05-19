@@ -10,12 +10,17 @@ export function Hero() {
       className="relative isolate flex min-h-screen items-center overflow-hidden bg-aubergine pt-20"
       aria-labelledby="hero-heading"
     >
-      {/* Oversized G mark, desktop only */}
+      {/* G mark, desktop only */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-32 top-1/2 hidden -translate-y-1/2 opacity-60 lg:block"
+        className="pointer-events-none absolute -right-12 top-1/2 hidden -translate-y-1/2 opacity-50 lg:block"
       >
-        <img src={genevaGMark} alt="" className="h-[780px] w-auto" />
+        <img
+          src={genevaGMark}
+          alt=""
+          className="h-auto w-[380px] xl:w-[460px]"
+          style={{ imageRendering: "auto" }}
+        />
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6 md:px-10">

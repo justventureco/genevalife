@@ -2,7 +2,8 @@ import { Shield, HandHeart, Scale } from "lucide-react";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { EyebrowLabel } from "@/components/ui/EyebrowLabel";
 import { IconBadge } from "@/components/ui/IconBadge";
-import { HexLogo } from "@/components/geneva/HexLogo";
+import genevaGMark from "@/assets/geneva-g-mark.png";
+
 
 const pillars = [
   {

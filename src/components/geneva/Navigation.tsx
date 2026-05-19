@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { GenevaButton } from "@/components/ui/GenevaButton";
-import { GenevaWordmark } from "@/components/geneva/HexLogo";
 import { cn } from "@/lib/utils";
+import genevaLogo from "@/assets/geneva-logo-inverted.png";
 
 const links = [
   { label: "Who We Are", href: "#who-we-are" },
-  { label: "Approach", href: "#approach" },
+  { label: "Our Approach", href: "#approach" },
   { label: "Who We Serve", href: "#who-we-serve" },
   { label: "Why Geneva", href: "#why-geneva" },
   { label: "What's Next", href: "#whats-next" },
 ];
+
 
 export function Navigation() {
   const [open, setOpen] = useState(false);
@@ -26,8 +27,8 @@ export function Navigation() {
         aria-label="Primary"
         className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 md:h-20 md:px-10"
       >
-        <a href="#top" aria-label="Geneva Life Holdings home">
-          <GenevaWordmark tone="light" />
+        <a href="#top" aria-label="Geneva Life Holdings home" className="flex items-center">
+          <img src={genevaLogo} alt="Geneva" className="h-8 w-auto md:h-9" />
         </a>
 
         <ul className="hidden items-center gap-8 lg:flex">

@@ -52,7 +52,7 @@ export function Approach() {
               className="group border border-beige/15 p-10 transition-all duration-500 hover:-translate-y-1 hover:border-sunset"
             >
               <IconBadge icon={p.icon} tone="sunset" />
-              <h3 className="mt-8 font-display text-[24px] font-medium text-beige md:text-[28px]">
+              <h3 className="mt-8 whitespace-pre-line font-display text-[24px] font-medium text-beige md:text-[28px]">
                 {p.title}
               </h3>
               <p className="mt-4 text-[16px] leading-relaxed text-beige/75">{p.body}</p>

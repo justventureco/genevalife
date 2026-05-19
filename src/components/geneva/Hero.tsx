@@ -29,7 +29,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <EyebrowLabel className="text-sunset">A New Chapter</EyebrowLabel>
+            <EyebrowLabel className="text-sunset">A Platform for Private Wealth</EyebrowLabel>
           </motion.div>
 
           <motion.h1

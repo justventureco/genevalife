@@ -1,5 +1,6 @@
-import { GenevaWordmark } from "@/components/geneva/HexLogo";
 import { EyebrowLabel } from "@/components/ui/EyebrowLabel";
+import genevaLogo from "@/assets/geneva-logo-inverted.png";
+
 
 const navLinks = [
   { label: "Who We Are", href: "#who-we-are" },

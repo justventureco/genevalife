@@ -2,7 +2,8 @@ import { Shield, HandHeart, Scale } from "lucide-react";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { EyebrowLabel } from "@/components/ui/EyebrowLabel";
 import { IconBadge } from "@/components/ui/IconBadge";
-import { HexLogo } from "@/components/geneva/HexLogo";
+import genevaGMark from "@/assets/geneva-g-mark.png";
+
 
 const pillars = [
   {
@@ -31,7 +32,7 @@ export function Approach() {
       className="relative isolate overflow-hidden bg-aubergine py-20 md:py-40"
     >
       <div aria-hidden className="pointer-events-none absolute -bottom-24 -right-24 opacity-[0.08]">
-        <HexLogo size={480} stroke="#E9E0DB" />
+        <img src={genevaGMark} alt="" className="h-auto w-[480px]" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 md:px-10">

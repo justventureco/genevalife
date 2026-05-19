@@ -13,13 +13,12 @@ export function Hero() {
       {/* G mark, desktop only */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-12 top-1/2 hidden -translate-y-1/2 opacity-50 lg:block"
+        className="pointer-events-none absolute right-[6%] top-1/2 hidden -translate-y-1/2 opacity-55 lg:block"
       >
         <img
           src={genevaGMark}
           alt=""
-          className="h-auto w-[380px] xl:w-[460px]"
-          style={{ imageRendering: "auto" }}
+          className="h-auto w-[460px] xl:w-[560px] 2xl:w-[620px]"
         />
       </div>
 

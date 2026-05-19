@@ -27,8 +27,8 @@ export function Navigation() {
         aria-label="Primary"
         className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 md:h-20 md:px-10"
       >
-        <a href="#top" aria-label="Geneva Life Holdings home">
-          <GenevaWordmark tone="light" />
+        <a href="#top" aria-label="Geneva Life Holdings home" className="flex items-center">
+          <img src={genevaLogo} alt="Geneva" className="h-8 w-auto md:h-9" />
         </a>
 
         <ul className="hidden items-center gap-8 lg:flex">

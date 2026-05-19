@@ -17,7 +17,7 @@ const pillars = [
   },
   {
     icon: Scale,
-    title: "Aligned Interests",
+    title: "Aligned\u00A0Interests",
     body: "At every layer of the structure, our interests are aligned with the interests of the people we serve. No mixed incentives. No competing priorities. One institution. One standard.",
   },
 ];

@@ -3,13 +3,18 @@ import type { LucideIcon } from "lucide-react";
 
 type Props = {
   icon: LucideIcon;
-  tone?: "brick" | "sunset";
+  tone?: "brick" | "sunset" | "white";
   size?: number;
   className?: string;
 };
 
 export function IconBadge({ icon: Icon, tone = "brick", size = 56, className }: Props) {
-  const color = tone === "brick" ? "text-brick border-brick" : "text-sunset border-sunset";
+  const color =
+    tone === "brick"
+      ? "text-brick border-brick"
+      : tone === "white"
+        ? "text-white border-white"
+        : "text-sunset border-sunset";
   return (
     <div
       className={cn(

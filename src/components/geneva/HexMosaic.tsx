@@ -30,11 +30,12 @@ const tiles: Tile[] = [
 
 export function HexMosaic({ className = "" }: { className?: string }) {
   // Base hex size in px (width). Height of pointy-top hex = width * 2/sqrt(3).
-  const BASE = 200;
+  const BASE = 190;
   const H = BASE * 1.1547;
-  const COL_STEP = BASE * 0.92; // slight horizontal overlap suggestion
-  const ROW_STEP = H * 0.5; // half-hex vertical step lets staggered rows mesh
-  const GAP = 8;
+  const SPACING = 22; // breathing room between tiles
+  const COL_STEP = BASE + SPACING;
+  const ROW_STEP = H * 0.5 + SPACING * 0.6;
+  const GAP = 0;
 
   // Compute mosaic footprint
   const maxCol = Math.max(...tiles.map((t) => t.col));

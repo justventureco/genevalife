@@ -81,10 +81,12 @@ export function WhoWeServe() {
 
               <a
                 href={c.cta.href}
-                className="group mt-10 inline-flex items-center gap-2 text-[14px] font-medium uppercase text-brick transition-colors hover:text-sunset"
+                className="group mt-10 inline-flex items-center gap-2 text-[14px] font-medium uppercase text-brick"
                 style={{ letterSpacing: "0.12em" }}
               >
-                {c.cta.label}
+                <span className="bg-[linear-gradient(currentColor,currentColor)] bg-[length:0%_1px] bg-left-bottom bg-no-repeat transition-[background-size] duration-300 group-hover:bg-[length:100%_1px]">
+                  {c.cta.label}
+                </span>
                 <ArrowRight
                   size={16}
                   className="transition-transform duration-300 group-hover:translate-x-1"

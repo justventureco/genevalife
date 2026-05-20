@@ -27,7 +27,7 @@ export function WhyGeneva() {
       as="section"
       id="why-geneva"
       ariaLabel="Why Geneva"
-      className="bg-wine py-20 md:py-40"
+      className="bg-wine py-16 md:py-28"
     >
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <div className="mx-auto max-w-[960px] text-center">

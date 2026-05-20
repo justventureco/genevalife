@@ -29,7 +29,7 @@ export function Approach() {
       as="section"
       id="approach"
       ariaLabel="Our approach"
-      className="relative isolate overflow-hidden bg-aubergine py-20 md:py-40"
+      className="relative isolate overflow-hidden bg-aubergine py-16 md:py-28"
     >
       <div aria-hidden className="pointer-events-none absolute -bottom-24 -right-24 opacity-[0.08]">
         <img src={genevaGMark} alt="" className="h-auto w-[480px]" />

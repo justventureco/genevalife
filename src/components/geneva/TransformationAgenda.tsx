@@ -19,7 +19,7 @@ export function TransformationAgenda() {
       as="section"
       id="agenda"
       ariaLabel="Transformation agenda"
-      className="bg-beige py-20 md:py-40"
+      className="bg-beige py-16 md:py-28"
     >
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <div className="max-w-[960px]">

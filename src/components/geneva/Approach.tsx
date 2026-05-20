@@ -36,7 +36,7 @@ export function Approach() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 md:px-10">
-        <div className="mx-auto max-w-[720px] text-center">
+        <div className="mx-auto max-w-[960px] text-center">
           <EyebrowLabel className="text-sunset">Our Approach</EyebrowLabel>
           <h2
             className="mt-6 font-display font-medium text-beige"

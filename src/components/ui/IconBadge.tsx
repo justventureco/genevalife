@@ -3,7 +3,7 @@ import type { LucideIcon } from "lucide-react";
 
 type Props = {
   icon: LucideIcon;
-  tone?: "brick" | "sunset";
+  tone?: "brick" | "sunset" | "white";
   size?: number;
   className?: string;
 };

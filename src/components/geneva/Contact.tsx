@@ -73,7 +73,7 @@ export function Contact() {
               >
                 Existing Partners
               </p>
-              <p>Existing partners can also reach our Client Services team directly.</p>
+              <p className="text-aubergine">Existing partners can also reach our Client Services team directly.</p>
               <p>
                 <a
                   href="mailto:info@geneva-ppli.com"

@@ -73,11 +73,32 @@ export function HexMosaic({ className = "" }: { className?: string }) {
             }}
           >
             {t.preShaped ? (
-              <img
-                src={t.src}
-                alt={t.alt}
-                style={{ width: "100%", height: "100%", objectFit: "fill" }}
-              />
+              <div
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  clipPath: HEX_CLIP,
+                  WebkitClipPath: HEX_CLIP,
+                  background: "var(--color-sunset)",
+                  position: "relative",
+                }}
+              >
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: 3,
+                    clipPath: HEX_CLIP,
+                    WebkitClipPath: HEX_CLIP,
+                    overflow: "hidden",
+                  }}
+                >
+                  <img
+                    src={t.src}
+                    alt={t.alt}
+                    style={{ width: "100%", height: "100%", objectFit: "fill" }}
+                  />
+                </div>
+              </div>
             ) : (
               <div
                 style={{

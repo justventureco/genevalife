@@ -16,11 +16,11 @@ const base =
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-aubergine text-beige border border-sunset/60 hover:text-white hover:border-sunset",
+    "bg-aubergine text-white border border-white/80 hover:bg-white hover:text-aubergine hover:border-white",
   "ghost-brick":
     "border border-brick text-brick bg-transparent hover:bg-brick hover:text-white",
   "ghost-sunset":
-    "border border-sunset text-sunset bg-transparent hover:bg-sunset hover:text-aubergine",
+    "border border-white text-white bg-transparent hover:bg-white hover:text-aubergine",
 };
 
 const sizes: Record<Size, string> = {
@@ -33,17 +33,7 @@ export const GenevaButton = forwardRef<HTMLAnchorElement | HTMLButtonElement, Pr
     const classes = cn(base, variants[variant], sizes[size], className);
     const tracking = { letterSpacing: "0.12em" } as React.CSSProperties;
 
-    const inner = (
-      <>
-        {variant === "primary" && (
-          <span
-            aria-hidden
-            className="absolute inset-0 -translate-x-full transition-transform duration-500 ease-out group-hover:translate-x-0 bg-gradient-brand"
-          />
-        )}
-        <span className="relative z-10">{children}</span>
-      </>
-    );
+    const inner = <span className="relative z-10">{children}</span>;
 
     if (href) {
       return (

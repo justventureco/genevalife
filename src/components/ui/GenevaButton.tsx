@@ -35,7 +35,7 @@ export const GenevaButton = forwardRef<HTMLAnchorElement | HTMLButtonElement, Pr
 
     const inner = (
       <>
-        {variant === "primary" && (
+        {(variant === "primary" || variant === "ghost-sunset") && (
           <span
             aria-hidden
             className="absolute inset-0 -translate-x-full transition-transform duration-500 ease-out group-hover:translate-x-0 bg-gradient-brand"

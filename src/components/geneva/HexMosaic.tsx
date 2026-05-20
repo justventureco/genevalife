@@ -3,7 +3,7 @@ import hexAdvisor from "@/assets/hex-advisor.jpg";
 import hexFamily from "@/assets/hex-family.jpg";
 import hexOffice from "@/assets/hex-office.jpg";
 import hexCouple from "@/assets/hex-couple.png";
-import hexBrand from "@/assets/geneva-g-mark.png";
+import hexBrand from "@/assets/geneva-g-gradient.png";
 
 // Flat-top hexagon (vertex left/right, flat top/bottom) — matches the
 // orientation of the user-provided couple image and the Geneva mark.
@@ -18,6 +18,7 @@ type Tile = {
   col: number;
   row: number;
   preShaped?: boolean;
+  brand?: boolean;
   delay?: number;
 };
 
@@ -29,7 +30,7 @@ export function HexMosaic({ className = "" }: { className?: string }) {
 
   // Honeycomb around Geneva: N (top), NE (top-right), SE (bottom-right), S (bottom).
   const tiles: Tile[] = [
-    { src: hexBrand,   alt: "Geneva",                   col: 0, row:  0,    preShaped: true, delay: 0    },
+    { src: hexBrand,   alt: "Geneva",                   col: 0, row:  0,    brand: true, delay: 0    },
     { src: hexFamily,  alt: "Multigenerational family", col: 0, row: -1,    delay: 0.15 },
     { src: hexCouple,  alt: "UHNW couple",              col: 1, row: -0.5,  preShaped: true, delay: 0.25 },
     { src: hexAdvisor, alt: "Trusted advisor",          col: 1, row:  0.5,  delay: 0.35 },
@@ -72,7 +73,13 @@ export function HexMosaic({ className = "" }: { className?: string }) {
               height: H,
             }}
           >
-            {t.preShaped ? (
+            {t.brand ? (
+              <img
+                src={t.src}
+                alt={t.alt}
+                style={{ width: "100%", height: "100%", objectFit: "contain" }}
+              />
+            ) : t.preShaped ? (
               <div
                 style={{
                   width: "100%",

@@ -22,7 +22,7 @@ export function TransformationAgenda() {
       className="bg-beige py-20 md:py-40"
     >
       <div className="mx-auto max-w-6xl px-6 md:px-10">
-        <div className="max-w-[640px]">
+        <div className="max-w-[960px]">
           <EyebrowLabel className="text-brick">Transformation Agenda</EyebrowLabel>
           <h2
             className="mt-6 font-display font-medium text-aubergine"
@@ -30,7 +30,7 @@ export function TransformationAgenda() {
           >
             A transformation already underway.
           </h2>
-          <p className="mt-6 text-[17px] leading-relaxed text-aubergine/85 md:text-[18px]">
+          <p className="mt-6 max-w-[720px] text-[17px] leading-relaxed text-aubergine/85 md:text-[18px]">
             Under new ownership, Geneva is being rebuilt around the touchpoints that matter most to
             the families and advisors we serve. These initiatives are in flight today.
           </p>
@@ -42,7 +42,7 @@ export function TransformationAgenda() {
             return (
               <div
                 key={it.title}
-                className="border-aubergine/10 p-8 md:p-10 [&:not(:last-child)]:border-b sm:[&:nth-child(odd)]:border-r sm:[&:nth-last-child(-n+2):nth-child(odd)]:border-b-0 md:[&:nth-child(3n+1)]:border-r md:[&:nth-child(3n+2)]:border-r md:[&:nth-child(odd)]:border-r md:[&:nth-last-child(-n+3)]:border-b-0"
+                className="border-aubergine/10 p-8 md:p-10 [&:not(:last-child)]:border-b sm:[&:nth-child(odd)]:border-r sm:[&:nth-last-child(-n+2):nth-child(odd)]:border-b-0 md:[&:nth-child(3n+1)]:border-r md:[&:nth-child(3n+2)]:border-r md:[&:nth-last-child(-n+3)]:border-b-0"
                 data-i={i}
               >
                 <div className="flex h-10 w-10 items-center justify-center rounded-full border border-brick text-brick">

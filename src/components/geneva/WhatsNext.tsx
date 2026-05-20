@@ -49,8 +49,8 @@ export function WhatsNext() {
             >
               <div className="md:col-span-3">
                 <div
-                  className="font-display font-medium leading-none text-gradient-brand"
-                  style={{ fontSize: "clamp(4.5rem, 10vw, 7.5rem)", letterSpacing: "-0.04em" }}
+                  className="font-display font-medium text-gradient-brand pb-2"
+                  style={{ fontSize: "clamp(4.5rem, 10vw, 7.5rem)", letterSpacing: "-0.04em", lineHeight: 1.1 }}
                 >
                   {s.n}
                 </div>

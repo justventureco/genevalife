@@ -85,15 +85,26 @@ export function HexMosaic({ className = "" }: { className?: string }) {
                   height: "100%",
                   clipPath: HEX_CLIP,
                   WebkitClipPath: HEX_CLIP,
-                  overflow: "hidden",
+                  background: "var(--color-sunset)",
+                  position: "relative",
                 }}
               >
-                <img
-                  src={t.src}
-                  alt={t.alt}
-                  loading="lazy"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: 3,
+                    clipPath: HEX_CLIP,
+                    WebkitClipPath: HEX_CLIP,
+                    overflow: "hidden",
+                  }}
+                >
+                  <img
+                    src={t.src}
+                    alt={t.alt}
+                    loading="lazy"
+                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  />
+                </div>
               </div>
             )}
           </motion.div>

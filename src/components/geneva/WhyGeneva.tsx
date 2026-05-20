@@ -30,7 +30,7 @@ export function WhyGeneva() {
       className="bg-wine py-20 md:py-40"
     >
       <div className="mx-auto max-w-6xl px-6 md:px-10">
-        <div className="mx-auto max-w-[760px] text-center">
+        <div className="mx-auto max-w-[960px] text-center">
           <EyebrowLabel className="text-sunset">Why Geneva</EyebrowLabel>
           <h2
             className="mt-6 font-display font-medium text-beige"
@@ -46,7 +46,7 @@ export function WhyGeneva() {
           </p>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 gap-12 md:grid-cols-3">
+        <div className="mt-20 grid grid-cols-1 gap-16 md:grid-cols-3">
           {proofs.map((p) => (
             <div key={p.title} className="flex flex-col items-center text-center">
               <IconBadge icon={p.icon} tone="sunset" />

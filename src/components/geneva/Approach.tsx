@@ -9,17 +9,17 @@ const pillars = [
   {
     icon: Shield,
     title: "Institutional Discipline",
-    body: "We operate with the governance, oversight, and operating rigor expected by the families and advisors we serve. Institutional standards are our baseline, not our ceiling.",
+    body: "We operate with the governance, oversight, and operating rigor expected by the families and advisors we serve. Institutional standards are our baseline, not our\u00A0ceiling.",
   },
   {
     icon: HandHeart,
     title: "White-Glove Partnership",
-    body: "Proactive service, dedicated coverage on our key relationships, faster turnaround on what matters most, and a leadership team that is reachable, responsive, and accountable.",
+    body: "Proactive service, dedicated coverage on our key relationships, faster turnaround on what matters most, and a leadership team that is reachable, responsive, and\u00A0accountable.",
   },
   {
     icon: Scale,
     title: "Aligned\nInterests",
-    body: "At every layer of the structure, our interests are aligned with the interests of the people we serve. No mixed incentives. No competing priorities. One institution. One standard.",
+    body: "At every layer of the structure, our interests are aligned with the interests of the people we serve. No mixed incentives. No competing priorities. One institution. One\u00A0standard.",
   },
 ];
 

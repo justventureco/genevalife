@@ -22,7 +22,7 @@ export function TransformationAgenda() {
       className="bg-beige py-20 md:py-40"
     >
       <div className="mx-auto max-w-6xl px-6 md:px-10">
-        <div className="max-w-[640px]">
+        <div className="max-w-[960px]">
           <EyebrowLabel className="text-brick">Transformation Agenda</EyebrowLabel>
           <h2
             className="mt-6 font-display font-medium text-aubergine"
@@ -30,7 +30,7 @@ export function TransformationAgenda() {
           >
             A transformation already underway.
           </h2>
-          <p className="mt-6 text-[17px] leading-relaxed text-aubergine/85 md:text-[18px]">
+          <p className="mt-6 max-w-[720px] text-[17px] leading-relaxed text-aubergine/85 md:text-[18px]">
             Under new ownership, Geneva is being rebuilt around the touchpoints that matter most to
             the families and advisors we serve. These initiatives are in flight today.
           </p>

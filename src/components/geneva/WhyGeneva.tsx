@@ -6,17 +6,17 @@ import { IconBadge } from "@/components/ui/IconBadge";
 const proofs = [
   {
     icon: BadgeCheck,
-    title: "Regulated & Established",
+    title: "Regulated &\nEstablished",
     body: "A long-standing, regulated insurance platform operating in a recognized international financial center.",
   },
   {
     icon: Landmark,
-    title: "Institutionally Capitalized",
+    title: "Institutionally\nCapitalized",
     body: "Backed by ownership and capital structures designed to support our commitments over the long term.",
   },
   {
     icon: Users,
-    title: "Directly Accessible Leadership",
+    title: "Directly Accessible\nLeadership",
     body: "A leadership team that is reachable, responsive, and accountable – by design, not by exception.",
   },
 ];
@@ -50,7 +50,7 @@ export function WhyGeneva() {
           {proofs.map((p) => (
             <div key={p.title} className="flex flex-col items-center text-center">
               <IconBadge icon={p.icon} tone="sunset" />
-              <h3 className="mt-6 font-display text-[22px] font-medium text-beige md:text-[24px]">
+              <h3 className="mt-6 whitespace-pre-line font-display text-[22px] font-medium text-beige md:text-[24px]">
                 {p.title}
               </h3>
               <p className="mt-4 max-w-[320px] text-[15px] leading-relaxed text-beige/80">

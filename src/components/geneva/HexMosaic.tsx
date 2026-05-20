@@ -102,8 +102,6 @@ export function HexMosaic({ className = "" }: { className?: string }) {
           </motion.div>
         );
       })}
-      {/* unused vars guard */}
-      <span style={{ display: "none" }}>{offsetX}{offsetY}{width}{height}</span>
     </div>
   );
 }

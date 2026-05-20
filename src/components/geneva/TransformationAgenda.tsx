@@ -5,12 +5,12 @@ import { EyebrowLabel } from "@/components/ui/EyebrowLabel";
 type Item = { icon: LucideIcon; title: string; body: string };
 
 const items: Item[] = [
-  { icon: FileCheck, title: "Onboarding & New Business", body: "Easier, faster, more transparent at every step." },
-  { icon: Settings2, title: "Service & Administration", body: "Modernized systems, dedicated points of contact, calibrated service standards." },
-  { icon: BarChart3, title: "Reporting & Statements", body: "Clearer, more frequent, more useful." },
-  { icon: ShieldCheck, title: "Compliance & Regulatory Rigor", body: "Institutional standards as the baseline, not the ceiling." },
-  { icon: Layers, title: "Platform Expansion", body: "An expanded set of institutional-quality offerings, rolling out over the coming quarters." },
-  { icon: Phone, title: "Leadership Access", body: "Direct lines, clear escalation, no surprises." },
+  { icon: FileCheck, title: "Onboarding &\nNew Business", body: "Easier, faster, more transparent at\nevery step." },
+  { icon: Settings2, title: "Service &\nAdministration", body: "Modernized systems, dedicated points of contact, calibrated service standards." },
+  { icon: BarChart3, title: "Reporting &\nStatements", body: "Clearer, more frequent, more useful." },
+  { icon: ShieldCheck, title: "Compliance &\nRegulatory Rigor", body: "Institutional standards as the baseline, not the ceiling." },
+  { icon: Layers, title: "Platform\nExpansion", body: "An expanded set of institutional-quality offerings, rolling out over the coming quarters." },
+  { icon: Phone, title: "Leadership\nAccess", body: "Direct lines, clear escalation, no surprises." },
 ];
 
 export function TransformationAgenda() {

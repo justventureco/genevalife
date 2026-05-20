@@ -5,46 +5,42 @@ import hexOffice from "@/assets/hex-office.jpg";
 import hexCouple from "@/assets/hex-couple.png";
 import hexBrand from "@/assets/geneva-g-mark.png";
 
-// Pointy-top hexagon (vertices top/bottom, vertical edges left/right)
+// Pointy-top hexagon (vertex at top/bottom, vertical edges left/right)
 const HEX_CLIP =
   "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)";
 
 type Tile = {
   src: string;
   alt: string;
-  pos: "nw" | "ne" | "sw" | "se" | "center";
-  brand?: boolean;
+  pos: "top" | "bottom" | "left" | "right" | "center";
+  preShaped?: boolean; // image already has hex transparency — don't clip
   delay?: number;
 };
 
 const tiles: Tile[] = [
-  { src: hexBrand,   alt: "Geneva",                          pos: "center", brand: true, delay: 0    },
-  { src: hexFamily,  alt: "Multigenerational family",        pos: "nw",     delay: 0.15 },
-  { src: hexCouple,  alt: "UHNW family",                     pos: "ne",     delay: 0.25 },
-  { src: hexOffice,  alt: "Family office boardroom",         pos: "sw",     delay: 0.35 },
-  { src: hexAdvisor, alt: "Advisor in client meeting",       pos: "se",     delay: 0.45 },
+  { src: hexBrand,   alt: "Geneva",                   pos: "center", preShaped: true, delay: 0    },
+  { src: hexFamily,  alt: "Multigenerational family", pos: "top",    delay: 0.15 },
+  { src: hexAdvisor, alt: "Trusted advisor",          pos: "left",   delay: 0.25 },
+  { src: hexCouple,  alt: "UHNW couple",              pos: "right",  preShaped: true, delay: 0.35 },
+  { src: hexOffice,  alt: "Family office boardroom",  pos: "bottom", delay: 0.45 },
 ];
 
 export function HexMosaic({ className = "" }: { className?: string }) {
-  // Pointy-top hex: width W (flat side to flat side), height H = W * 2/sqrt(3).
-  const W = 200;
-  const H = W * 1.1547; // ≈ 230.9
+  // Pointy-top hex: W = flat-to-flat width, H = vertex-to-vertex height.
+  const W = 190;
+  const H = W * 1.1547; // ≈ 219.4
   const GAP = 14;
 
-  // Honeycomb offsets relative to center (in px).
-  // Vertical neighbor step = 0.75 * H, horizontal half-step = W / 2.
-  const dx = W / 2 + GAP * 0.5;
-  const dy = 0.75 * H + GAP * 0.5;
-
+  // Cross layout around center: vertical neighbors offset by H + GAP
+  // (vertex-to-vertex), horizontal neighbors offset by W + GAP (edge-shared).
   const positions: Record<Tile["pos"], { x: number; y: number }> = {
-    center: { x: 0,    y: 0   },
-    nw:     { x: -dx,  y: -dy },
-    ne:     { x:  dx,  y: -dy },
-    sw:     { x: -dx,  y:  dy },
-    se:     { x:  dx,  y:  dy },
+    center: { x: 0,        y: 0           },
+    top:    { x: 0,        y: -(H + GAP)  },
+    bottom: { x: 0,        y:  (H + GAP)  },
+    left:   { x: -(W + GAP), y: 0          },
+    right:  { x:  (W + GAP), y: 0          },
   };
 
-  // Compute bounding box from tile rectangles.
   const xs = Object.values(positions).map((p) => p.x);
   const ys = Object.values(positions).map((p) => p.y);
   const minX = Math.min(...xs) - W / 2;
@@ -75,7 +71,7 @@ export function HexMosaic({ className = "" }: { className?: string }) {
               height: H,
             }}
           >
-            {t.brand ? (
+            {t.preShaped ? (
               <img
                 src={t.src}
                 alt={t.alt}

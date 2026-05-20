@@ -27,15 +27,13 @@ export function HexMosaic({ className = "" }: { className?: string }) {
   const H = W * 0.8660; // ≈ 173.2
   const GAP = 10;
 
-  // Cluster: Geneva at (0,0). Four photos attached to its right side.
-  //   col 1 (touching center): family top-right, office bottom-right
-  //   col 2 (far right):       couple top-far,  advisor below couple
+  // Honeycomb around Geneva: N (top), NE (top-right), SE (bottom-right), S (bottom).
   const tiles: Tile[] = [
-    { src: hexBrand,   alt: "Geneva",                   col: 0, row: 0,    preShaped: true, delay: 0    },
-    { src: hexFamily,  alt: "Multigenerational family", col: 1, row: -0.5, delay: 0.15 },
-    { src: hexOffice,  alt: "Family office boardroom",  col: 1, row:  0.5, delay: 0.25 },
-    { src: hexCouple,  alt: "UHNW couple",              col: 2, row: -0.5, preShaped: true, delay: 0.35 },
-    { src: hexAdvisor, alt: "Trusted advisor",          col: 2, row:  0.5, delay: 0.45 },
+    { src: hexBrand,   alt: "Geneva",                   col: 0, row:  0,    preShaped: true, delay: 0    },
+    { src: hexFamily,  alt: "Multigenerational family", col: 0, row: -1,    delay: 0.15 },
+    { src: hexCouple,  alt: "UHNW couple",              col: 1, row: -0.5,  preShaped: true, delay: 0.25 },
+    { src: hexAdvisor, alt: "Trusted advisor",          col: 1, row:  0.5,  delay: 0.35 },
+    { src: hexOffice,  alt: "Family office boardroom",  col: 0, row:  1,    delay: 0.45 },
   ];
 
   const stepX = 0.75 * W + GAP * 0.5;

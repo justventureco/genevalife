@@ -24,7 +24,7 @@ const cols: Col[] = [
   },
   {
     tag: "Families & Principals",
-    heading: "A platform built to carry wealth forward.",
+    heading: "A platform built to carry wealth\u00A0forward.",
     body: "Families work with Geneva to protect, optimize, and carry forward what has taken a lifetime – sometimes generations – to build. We bring discretion to every conversation, discipline to every structure, and continuity to every relationship. Your advisors stay at the center. We stand behind them.",
     proof: [
       "Discretion as an operating standard, not a promise",

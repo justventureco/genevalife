@@ -3,7 +3,7 @@ import hexAdvisor from "@/assets/hex-advisor.jpg";
 import hexFamily from "@/assets/hex-family.jpg";
 import hexOffice from "@/assets/hex-office.jpg";
 import hexCouple from "@/assets/hex-couple.png";
-import hexBrand from "@/assets/geneva-g-mark.png";
+import hexBrand from "@/assets/geneva-g-gradient.png";
 
 // Flat-top hexagon (vertex left/right, flat top/bottom) — matches the
 // orientation of the user-provided couple image and the Geneva mark.

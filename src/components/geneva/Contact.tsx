@@ -60,8 +60,8 @@ export function Contact() {
               Start a conversation.
             </h2>
             <p className="mt-6 text-[17px] leading-relaxed text-aubergine/85 md:text-[18px]">
-              Tell us a bit about yourself and a member of our team will be in touch within one
-              business day. All inquiries are handled in confidence.
+              Tell us a bit about yourself and a member of our team will be in touch. All inquiries
+              are handled in confidence.
             </p>
 
             <div className="mt-12 h-px w-10 bg-brick" />

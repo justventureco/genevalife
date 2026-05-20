@@ -24,13 +24,12 @@ type Tile = {
 
 export function HexMosaic({ className = "" }: { className?: string }) {
   // Flat-top hex aspect ratio: W (vertex-to-vertex) : H (flat-to-flat) = 2 : √3
-  const W = 200;
-  const H = W * 0.8660; // ≈ 173.2
+  const W = 260;
+  const H = W * 0.8660;
   const GAP = 10;
 
-  // Honeycomb around Geneva: N (top), NE (top-right), SE (bottom-right), S (bottom).
+  // Honeycomb: N (top), NE (top-right), SE (bottom-right), S (bottom).
   const tiles: Tile[] = [
-    { src: hexBrand,   alt: "Geneva",                   col: 0, row:  0,    brand: true, delay: 0    },
     { src: hexFamily,  alt: "Multigenerational family", col: 0, row: -1,    delay: 0.15 },
     { src: hexCouple,  alt: "UHNW couple",              col: 1, row: -0.5,  preShaped: true, delay: 0.25 },
     { src: hexAdvisor, alt: "Trusted advisor",          col: 1, row:  0.5,  delay: 0.35 },

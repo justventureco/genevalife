@@ -59,7 +59,7 @@ export function WhatsNext() {
                 <h3 className="font-display text-[28px] font-medium text-beige md:text-[36px]">
                   {s.title}
                 </h3>
-                <p className="mt-3 text-[17px] leading-relaxed text-beige/80 md:text-[18px]">
+                <p className="mt-3 whitespace-pre-line text-[17px] leading-relaxed text-beige/80 md:text-[18px]">
                   {s.body}
                 </p>
               </div>

@@ -24,7 +24,7 @@ type Tile = {
 
 export function HexMosaic({ className = "" }: { className?: string }) {
   // Flat-top hex aspect ratio: W (vertex-to-vertex) : H (flat-to-flat) = 2 : √3
-  const W = 260;
+  const W = 234;
   const H = W * 0.8660;
   const GAP = 10;
 

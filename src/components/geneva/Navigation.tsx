@@ -28,7 +28,7 @@ export function Navigation() {
         className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 md:h-20 md:px-10"
       >
         <a href="#top" aria-label="Geneva Life Holdings home" className="flex items-center">
-          <img src={genevaLogo} alt="Geneva" className="h-8 w-auto md:h-9" />
+          <img src={genevaLogo} alt="Geneva" className="h-9 w-auto md:h-10" />
         </a>
 
         <ul className="hidden items-center gap-8 lg:flex">
@@ -36,7 +36,7 @@ export function Navigation() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="group relative inline-block text-[14px] text-beige/80 transition-colors hover:text-beige"
+                className="group relative inline-block text-[16px] text-beige/80 transition-colors hover:text-beige"
               >
                 {l.label}
                 <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-sunset transition-transform duration-300 group-hover:scale-x-100" />

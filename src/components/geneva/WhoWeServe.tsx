@@ -64,7 +64,7 @@ export function WhoWeServe() {
                   : "md:pl-12"
               }
             >
-              <EyebrowLabel className="text-brick text-[12px]">{c.tag}</EyebrowLabel>
+              <EyebrowLabel className="text-brick">{c.tag}</EyebrowLabel>
               <h3 className="mt-5 font-display text-[26px] font-medium text-aubergine md:text-[32px]" style={{ lineHeight: 1.2 }}>
                 {c.heading}
               </h3>

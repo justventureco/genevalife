@@ -44,13 +44,7 @@ export function HexMosaic({ className = "" }: { className?: string }) {
     se:     { x:  dx,  y:  dy },
   };
 
-  // Bounding box
-  const width = W * 2 + GAP;
-  const height = H + 2 * dy;
-  const offsetX = W / 2 + GAP / 2; // shift so leftmost tile starts at x=0
-  const offsetY = dy + H / 2;       // shift so topmost tile starts at y=0... wait
-
-  // Simpler: compute via min/max of tile rectangles.
+  // Compute bounding box from tile rectangles.
   const xs = Object.values(positions).map((p) => p.x);
   const ys = Object.values(positions).map((p) => p.y);
   const minX = Math.min(...xs) - W / 2;

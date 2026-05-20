@@ -60,8 +60,8 @@ export function Contact() {
               Start a conversation.
             </h2>
             <p className="mt-6 text-[17px] leading-relaxed text-aubergine/85 md:text-[18px]">
-              Tell us a bit about yourself and a member of our team will be in touch within one
-              business day. All inquiries are handled in confidence.
+              Tell us a bit about yourself and a member of our team will be in touch. All inquiries
+              are handled in confidence.
             </p>
 
             <div className="mt-12 h-px w-10 bg-brick" />
@@ -73,7 +73,7 @@ export function Contact() {
               >
                 Existing Partners
               </p>
-              <p>Existing partners can also reach our Client Services team directly.</p>
+              <p className="text-aubergine">Existing partners can also reach our Client Services team directly.</p>
               <p>
                 <a
                   href="mailto:info@geneva-ppli.com"
@@ -95,7 +95,7 @@ export function Contact() {
                 >
                   Office
                 </p>
-                <address className="mt-3 not-italic text-[14px] leading-[1.7] text-aubergine/80">
+                <address className="mt-3 not-italic font-sans text-[14px] leading-[1.7] text-aubergine">
                   Geneva Life Holdings<br />
                   2nd Floor, One Welches<br />
                   Welches, St. Thomas<br />

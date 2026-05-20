@@ -87,6 +87,21 @@ export function Contact() {
                   +1 246 623 9700
                 </a>
               </p>
+
+              <div className="pt-6">
+                <p
+                  className="text-[11px] font-medium uppercase text-brick"
+                  style={{ letterSpacing: "0.18em" }}
+                >
+                  Office
+                </p>
+                <address className="mt-3 not-italic text-[14px] leading-[1.7] text-aubergine/80">
+                  Geneva Life Holdings<br />
+                  2nd Floor, One Welches<br />
+                  Welches, St. Thomas<br />
+                  Barbados BB22025
+                </address>
+              </div>
             </div>
           </div>
 

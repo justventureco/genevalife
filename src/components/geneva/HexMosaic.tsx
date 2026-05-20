@@ -57,8 +57,7 @@ export function HexMosaic({ className = "" }: { className?: string }) {
       aria-hidden={false}
     >
       {tiles.map((t, i) => {
-        const left = t.col * COL_STEP;
-        const top = t.row * ROW_STEP;
+        const { x, y } = positions[i];
         return (
           <motion.div
             key={i}
@@ -67,10 +66,10 @@ export function HexMosaic({ className = "" }: { className?: string }) {
             transition={{ duration: 0.8, delay: t.delay ?? 0, ease: "easeOut" }}
             style={{
               position: "absolute",
-              left,
-              top,
-              width: BASE - GAP,
-              height: H - GAP,
+              left: x,
+              top: y,
+              width: W,
+              height: H,
             }}
           >
             <div

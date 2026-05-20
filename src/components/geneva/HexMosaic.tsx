@@ -5,48 +5,49 @@ import hexOffice from "@/assets/hex-office.jpg";
 import hexCouple from "@/assets/hex-couple.png";
 import hexBrand from "@/assets/geneva-g-mark.png";
 
-// Pointy-top hexagon (vertex at top/bottom, vertical edges left/right)
+// Pointy-top hexagon (vertex top/bottom, vertical edges left/right)
 const HEX_CLIP =
   "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)";
 
 type Tile = {
   src: string;
   alt: string;
-  pos: "top" | "bottom" | "left" | "right" | "center";
-  preShaped?: boolean; // image already has hex transparency — don't clip
+  x: number; // multiple of W/2
+  y: number; // multiple of 0.75 * H
+  preShaped?: boolean;
   delay?: number;
 };
 
-const tiles: Tile[] = [
-  { src: hexBrand,   alt: "Geneva",                   pos: "center", preShaped: true, delay: 0    },
-  { src: hexFamily,  alt: "Multigenerational family", pos: "top",    delay: 0.15 },
-  { src: hexAdvisor, alt: "Trusted advisor",          pos: "left",   delay: 0.25 },
-  { src: hexCouple,  alt: "UHNW couple",              pos: "right",  preShaped: true, delay: 0.35 },
-  { src: hexOffice,  alt: "Family office boardroom",  pos: "bottom", delay: 0.45 },
-];
-
 export function HexMosaic({ className = "" }: { className?: string }) {
-  // Pointy-top hex: W = flat-to-flat width, H = vertex-to-vertex height.
-  const W = 190;
-  const H = W * 1.1547; // ≈ 219.4
-  const GAP = 14;
+  // Pointy-top hex sizing
+  const W = 180;
+  const H = W * 1.1547;
+  const GAP = 10;
 
-  // Cross layout around center: vertical neighbors offset by H + GAP
-  // (vertex-to-vertex), horizontal neighbors offset by W + GAP (edge-shared).
-  const positions: Record<Tile["pos"], { x: number; y: number }> = {
-    center: { x: 0,        y: 0           },
-    top:    { x: 0,        y: -(H + GAP)  },
-    bottom: { x: 0,        y:  (H + GAP)  },
-    left:   { x: -(W + GAP), y: 0          },
-    right:  { x:  (W + GAP), y: 0          },
-  };
+  // Honeycomb axial offsets (in W and H units), gap added per step.
+  // Center = Geneva. Cluster of 4 photos attached to right side of center.
+  //   NE   (W/2, -0.75H)        far-NE  (3W/2, -0.75H)  <- couple (user upload)
+  //   SE   (W/2, +0.75H)        far-SE  (3W/2, +0.75H)  <- advisor (below couple)
+  const tiles: Tile[] = [
+    { src: hexBrand,   alt: "Geneva",                   x: 0,   y: 0,    preShaped: true, delay: 0    },
+    { src: hexFamily,  alt: "Multigenerational family", x: 0.5, y: -1,   delay: 0.15 },
+    { src: hexOffice,  alt: "Family office boardroom",  x: 0.5, y:  1,   delay: 0.25 },
+    { src: hexCouple,  alt: "UHNW couple",              x: 1.5, y: -1,   preShaped: true, delay: 0.35 },
+    { src: hexAdvisor, alt: "Trusted advisor",          x: 1.5, y:  1,   delay: 0.45 },
+  ];
 
-  const xs = Object.values(positions).map((p) => p.x);
-  const ys = Object.values(positions).map((p) => p.y);
-  const minX = Math.min(...xs) - W / 2;
-  const maxX = Math.max(...xs) + W / 2;
-  const minY = Math.min(...ys) - H / 2;
-  const maxY = Math.max(...ys) + H / 2;
+  const stepX = W / 2 + GAP / 2;
+  const stepY = 0.75 * H + GAP * 0.5;
+
+  const positions = tiles.map((t) => ({
+    x: t.x * 2 * stepX, // multiplier of W/2 → pixels
+    y: t.y * stepY,
+  }));
+
+  const minX = Math.min(...positions.map((p) => p.x)) - W / 2;
+  const maxX = Math.max(...positions.map((p) => p.x)) + W / 2;
+  const minY = Math.min(...positions.map((p) => p.y)) - H / 2;
+  const maxY = Math.max(...positions.map((p) => p.y)) + H / 2;
   const boxW = maxX - minX;
   const boxH = maxY - minY;
 
@@ -56,7 +57,7 @@ export function HexMosaic({ className = "" }: { className?: string }) {
       style={{ width: boxW, height: boxH, position: "relative" }}
     >
       {tiles.map((t, i) => {
-        const p = positions[t.pos];
+        const p = positions[i];
         return (
           <motion.div
             key={i}

@@ -42,7 +42,7 @@ export function TransformationAgenda() {
             return (
               <div
                 key={it.title}
-                className="border-aubergine/10 p-8 md:p-10 [&:not(:last-child)]:border-b sm:[&:nth-child(odd)]:border-r sm:[&:nth-last-child(-n+2):nth-child(odd)]:border-b-0 md:[&:nth-child(3n+1)]:border-r md:[&:nth-child(3n+2)]:border-r md:[&:nth-last-child(-n+3)]:border-b-0"
+                className="border-aubergine/10 p-8 md:p-10 [&:not(:last-child)]:border-b sm:[&:nth-child(odd)]:border-r sm:[&:nth-last-child(-n+2):nth-child(odd)]:border-b-0 md:[&:nth-child(3n)]:border-r-0 md:[&:nth-child(3n+1)]:border-r md:[&:nth-child(3n+2)]:border-r md:[&:nth-last-child(-n+3)]:border-b-0"
                 data-i={i}
               >
                 <div className="flex h-10 w-10 items-center justify-center rounded-full border border-brick text-brick">

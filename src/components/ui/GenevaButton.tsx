@@ -20,7 +20,7 @@ const variants: Record<Variant, string> = {
   "ghost-brick":
     "border border-brick text-brick bg-transparent hover:bg-brick hover:text-white",
   "ghost-sunset":
-    "border border-white text-white bg-transparent hover:bg-white hover:text-aubergine",
+    "border border-white text-white bg-transparent hover:bg-sunset hover:text-aubergine hover:border-sunset",
 };
 
 const sizes: Record<Size, string> = {

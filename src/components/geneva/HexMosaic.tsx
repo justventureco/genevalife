@@ -2,50 +2,62 @@ import { motion } from "motion/react";
 import hexAdvisor from "@/assets/hex-advisor.jpg";
 import hexFamily from "@/assets/hex-family.jpg";
 import hexOffice from "@/assets/hex-office.jpg";
+import hexCouple from "@/assets/hex-couple.png";
 import hexBrand from "@/assets/geneva-g-mark.png";
 
-// Flat-top hexagon (vertices left/right, flat edges top/bottom)
+// Pointy-top hexagon (vertices top/bottom, vertical edges left/right)
 const HEX_CLIP =
-  "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)";
+  "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)";
 
 type Tile = {
   src: string;
   alt: string;
-  pos: "top" | "right" | "bottom" | "center";
+  pos: "nw" | "ne" | "sw" | "se" | "center";
   brand?: boolean;
   delay?: number;
 };
 
 const tiles: Tile[] = [
-  { src: hexFamily, alt: "Multigenerational family", pos: "top", delay: 0.15 },
-  { src: hexBrand, alt: "Geneva", pos: "center", brand: true, delay: 0 },
-  { src: hexAdvisor, alt: "Advisor in client meeting", pos: "right", delay: 0.3 },
-  { src: hexOffice, alt: "Family office boardroom", pos: "bottom", delay: 0.45 },
+  { src: hexBrand,   alt: "Geneva",                          pos: "center", brand: true, delay: 0    },
+  { src: hexFamily,  alt: "Multigenerational family",        pos: "nw",     delay: 0.15 },
+  { src: hexCouple,  alt: "UHNW family",                     pos: "ne",     delay: 0.25 },
+  { src: hexOffice,  alt: "Family office boardroom",         pos: "sw",     delay: 0.35 },
+  { src: hexAdvisor, alt: "Advisor in client meeting",       pos: "se",     delay: 0.45 },
 ];
 
 export function HexMosaic({ className = "" }: { className?: string }) {
-  // Flat-top hex: width W, height H = W * sqrt(3)/2.
+  // Pointy-top hex: width W (flat side to flat side), height H = W * 2/sqrt(3).
   const W = 200;
-  const H = W * 0.8660;
-  const GAP = 16;
+  const H = W * 1.1547; // ≈ 230.9
+  const GAP = 14;
 
-  // Center logo, with images on top, bottom, right.
+  // Honeycomb offsets relative to center (in px).
+  // Vertical neighbor step = 0.75 * H, horizontal half-step = W / 2.
+  const dx = W / 2 + GAP * 0.5;
+  const dy = 0.75 * H + GAP * 0.5;
+
   const positions: Record<Tile["pos"], { x: number; y: number }> = {
-    top:    { x: 0,         y: -(H + GAP) },
-    center: { x: 0,         y: 0 },
-    bottom: { x: 0,         y: H + GAP },
-    right:  { x: W + GAP,   y: 0 },
+    center: { x: 0,    y: 0   },
+    nw:     { x: -dx,  y: -dy },
+    ne:     { x:  dx,  y: -dy },
+    sw:     { x: -dx,  y:  dy },
+    se:     { x:  dx,  y:  dy },
   };
 
-  // Mosaic bounding box: x from 0 to W*2+GAP, y from -(H+GAP) to 2H+GAP
-  const width = W * 2 + GAP;
-  const height = H * 3 + GAP * 2;
-  const offsetY = H + GAP; // shift so top tile starts at y=0
+  // Compute bounding box from tile rectangles.
+  const xs = Object.values(positions).map((p) => p.x);
+  const ys = Object.values(positions).map((p) => p.y);
+  const minX = Math.min(...xs) - W / 2;
+  const maxX = Math.max(...xs) + W / 2;
+  const minY = Math.min(...ys) - H / 2;
+  const maxY = Math.max(...ys) + H / 2;
+  const boxW = maxX - minX;
+  const boxH = maxY - minY;
 
   return (
     <div
       className={className}
-      style={{ width, height, position: "relative" }}
+      style={{ width: boxW, height: boxH, position: "relative" }}
     >
       {tiles.map((t, i) => {
         const p = positions[t.pos];
@@ -57,22 +69,17 @@ export function HexMosaic({ className = "" }: { className?: string }) {
             transition={{ duration: 0.8, delay: t.delay ?? 0, ease: "easeOut" }}
             style={{
               position: "absolute",
-              left: p.x,
-              top: p.y + offsetY,
+              left: p.x - W / 2 - minX,
+              top: p.y - H / 2 - minY,
               width: W,
               height: H,
             }}
           >
             {t.brand ? (
-              // Logo is already a hexagon — render directly, no clip frame.
               <img
                 src={t.src}
                 alt={t.alt}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "contain",
-                }}
+                style={{ width: "100%", height: "100%", objectFit: "contain" }}
               />
             ) : (
               <div
@@ -88,11 +95,7 @@ export function HexMosaic({ className = "" }: { className?: string }) {
                   src={t.src}
                   alt={t.alt}
                   loading="lazy"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                  }}
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
               </div>
             )}

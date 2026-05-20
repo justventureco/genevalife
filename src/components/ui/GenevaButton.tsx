@@ -20,7 +20,7 @@ const variants: Record<Variant, string> = {
   "ghost-brick":
     "border border-brick text-brick bg-transparent hover:bg-brick hover:text-white",
   "ghost-sunset":
-    "border border-white text-white bg-transparent hover:bg-sunset hover:text-aubergine hover:border-sunset",
+    "border border-white text-white bg-transparent hover:text-white hover:border-white",
 };
 
 const sizes: Record<Size, string> = {
@@ -35,7 +35,7 @@ export const GenevaButton = forwardRef<HTMLAnchorElement | HTMLButtonElement, Pr
 
     const inner = (
       <>
-        {variant === "primary" && (
+        {(variant === "primary" || variant === "ghost-sunset") && (
           <span
             aria-hidden
             className="absolute inset-0 -translate-x-full transition-transform duration-500 ease-out group-hover:translate-x-0 bg-gradient-brand"

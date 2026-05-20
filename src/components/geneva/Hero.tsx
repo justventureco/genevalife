@@ -17,7 +17,7 @@ export function Hero() {
 
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6 md:px-10">
-        <div className="max-w-[640px]">
+        <div className="max-w-[760px] pb-28">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -30,7 +30,7 @@ export function Hero() {
             id="hero-heading"
             className="mt-8 font-display font-medium text-beige"
             style={{
-              fontSize: "clamp(2.75rem, 6vw, 4.5rem)",
+              fontSize: "clamp(2.75rem, 6vw, 4.25rem)",
               lineHeight: 1.05,
               letterSpacing: "-0.02em",
             }}
@@ -38,7 +38,11 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
           >
-            Sophisticated wealth deserves sophisticated structure.
+            Sophisticated
+            <br />
+            wealth deserves
+            <br />
+            sophisticated structure.
           </motion.h1>
 
           <motion.p
@@ -66,7 +70,7 @@ export function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute inset-x-0 bottom-8 flex flex-col items-center gap-3">
+      <div className="absolute inset-x-0 bottom-12 flex flex-col items-center gap-3">
         <EyebrowLabel className="text-sunset/80 text-[11px]">Scroll</EyebrowLabel>
         <motion.span
           className="block h-10 w-px bg-sunset"

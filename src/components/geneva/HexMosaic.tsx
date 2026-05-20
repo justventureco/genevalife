@@ -29,19 +29,26 @@ const tiles: Tile[] = [
 ];
 
 export function HexMosaic({ className = "" }: { className?: string }) {
-  // Base hex size in px (width). Height of pointy-top hex = width * 2/sqrt(3).
-  const BASE = 190;
-  const H = BASE * 1.1547;
-  const SPACING = 22; // breathing room between tiles
-  const COL_STEP = BASE + SPACING;
-  const ROW_STEP = H * 0.5 + SPACING * 0.6;
-  const GAP = 0;
+  // Pointy-top hex: width W, height H = W * 2/sqrt(3).
+  // Honeycomb pitch: horizontal = W, vertical = H * 0.75.
+  // Add GX/GY to create clean gaps so tiles never touch.
+  const W = 180;
+  const H = W * 1.1547;
+  const GX = 24;
+  const GY = 18;
 
-  // Compute mosaic footprint
-  const maxCol = Math.max(...tiles.map((t) => t.col));
-  const maxRow = Math.max(...tiles.map((t) => t.row));
-  const width = maxCol * COL_STEP + BASE;
-  const height = maxRow * ROW_STEP + H;
+  // Explicit pixel positions for a 5-tile honeycomb cluster.
+  const positions = [
+    { x: 0, y: 0 },                                          // top-left
+    { x: W + GX, y: 0 },                                     // top-right
+    { x: (W + GX) / 2, y: H * 0.75 + GY },                   // middle
+    { x: 0, y: H * 1.5 + GY * 2 },                           // bottom-left
+    { x: W + GX, y: H * 1.5 + GY * 2 },                      // bottom-right
+  ];
+
+  const width = (W + GX) + W;
+  const height = H * 1.5 + GY * 2 + H;
+
 
   return (
     <div

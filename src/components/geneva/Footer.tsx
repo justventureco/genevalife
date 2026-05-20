@@ -18,12 +18,6 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-12 py-16 md:grid-cols-3 md:gap-8">
           <div>
             <img src={genevaLogo} alt="Geneva" className="h-14 w-auto md:h-16" />
-            <address className="mt-8 not-italic text-[14px] leading-[1.7] text-beige/75">
-              Geneva Life Holdings<br />
-              2nd Floor, One Welches<br />
-              Welches, St. Thomas<br />
-              Barbados BB22025
-            </address>
           </div>
 
           <div>

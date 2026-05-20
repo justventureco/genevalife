@@ -11,8 +11,8 @@ export function Hero() {
       aria-labelledby="hero-heading"
     >
       {/* Hex mosaic, desktop only */}
-      <div className="pointer-events-none absolute right-[5%] top-1/2 hidden -translate-y-1/2 lg:block">
-        <HexMosaic className="scale-90 xl:scale-100 2xl:scale-110 origin-right" />
+      <div className="pointer-events-none absolute right-[10%] top-1/2 hidden -translate-y-1/2 lg:block">
+        <HexMosaic className="scale-90 xl:scale-95 2xl:scale-100 origin-right" />
       </div>
 
 

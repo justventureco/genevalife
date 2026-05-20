@@ -5,9 +5,10 @@ import hexOffice from "@/assets/hex-office.jpg";
 import hexCouple from "@/assets/hex-couple.png";
 import hexBrand from "@/assets/geneva-g-mark.png";
 
-// Pointy-top hexagon (vertex top/bottom, vertical edges left/right)
+// Flat-top hexagon clip (vertex left/right, flat top/bottom) to match the
+// orientation of the user-provided couple image.
 const HEX_CLIP =
-  "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)";
+  "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)";
 
 type Tile = {
   src: string;

@@ -95,7 +95,7 @@ export function Contact() {
                 >
                   Office
                 </p>
-                <address className="mt-3 not-italic text-[14px] leading-[1.7] text-aubergine/80">
+                <address className="mt-3 not-italic font-sans text-[14px] leading-[1.7] text-aubergine">
                   Geneva Life Holdings<br />
                   2nd Floor, One Welches<br />
                   Welches, St. Thomas<br />

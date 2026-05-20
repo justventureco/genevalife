@@ -76,15 +76,15 @@ export function Contact() {
               <p>Existing partners can also reach our Client Services team directly.</p>
               <p>
                 <a
-                  href="mailto:ClientServices@geneva-ppli.com"
-                  className="text-brick transition-colors hover:text-sunset"
+                  href="mailto:info@geneva-ppli.com"
+                  className="text-aubergine transition-colors hover:text-sunset"
                 >
-                  ClientServices@geneva-ppli.com
+                  info@geneva-ppli.com
                 </a>
               </p>
               <p>
-                <a href="tel:+12464310226" className="text-brick transition-colors hover:text-sunset">
-                  +1 246 431 0226
+                <a href="tel:+12466239700" className="text-aubergine transition-colors hover:text-sunset">
+                  +1 246 623 9700
                 </a>
               </p>
             </div>

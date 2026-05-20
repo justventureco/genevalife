@@ -48,10 +48,10 @@ export function TransformationAgenda() {
                 <div className="flex h-10 w-10 items-center justify-center rounded-full border border-brick text-brick">
                   <Icon size={18} strokeWidth={1.5} />
                 </div>
-                <h3 className="mt-5 font-display text-[20px] font-medium text-aubergine md:text-[22px]">
+                <h3 className="mt-5 whitespace-pre-line font-display text-[20px] font-medium text-aubergine md:text-[22px]">
                   {it.title}
                 </h3>
-                <p className="mt-3 text-[15px] leading-relaxed text-aubergine/75">{it.body}</p>
+                <p className="mt-3 whitespace-pre-line text-[15px] leading-relaxed text-aubergine/75">{it.body}</p>
               </div>
             );
           })}

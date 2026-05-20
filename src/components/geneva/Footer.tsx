@@ -30,16 +30,16 @@ export function Footer() {
             <EyebrowLabel className="text-sunset">Contact</EyebrowLabel>
             <ul className="mt-6 space-y-3 text-[14px] text-beige/80">
               <li>
-                <a href="tel:+12464310226" className="transition-colors hover:text-beige">
-                  +1 246 431 0226
+                <a href="tel:+12466239700" className="transition-colors hover:text-beige">
+                  +1 246 623 9700
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:ClientServices@geneva-ppli.com"
+                  href="mailto:info@geneva-ppli.com"
                   className="transition-colors hover:text-beige"
                 >
-                  ClientServices@geneva-ppli.com
+                  info@geneva-ppli.com
                 </a>
               </li>
             </ul>

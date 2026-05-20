@@ -73,7 +73,13 @@ export function HexMosaic({ className = "" }: { className?: string }) {
               height: H,
             }}
           >
-            {t.preShaped ? (
+            {t.brand ? (
+              <img
+                src={t.src}
+                alt={t.alt}
+                style={{ width: "100%", height: "100%", objectFit: "contain" }}
+              />
+            ) : t.preShaped ? (
               <div
                 style={{
                   width: "100%",

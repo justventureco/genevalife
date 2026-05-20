@@ -10,7 +10,7 @@ const steps = [
   {
     n: "02",
     title: "Consult",
-    body: "A member of leadership will meet with you to understand your situation, objectives, and the role Geneva might play.",
+    body: "A member of leadership will meet with you to understand your situation, objectives, and the role Geneva\nmight play.",
   },
   {
     n: "03",

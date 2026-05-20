@@ -17,12 +17,12 @@ export function WhoWeAre() {
               className="mt-6 font-display font-medium text-aubergine"
               style={{ fontSize: "clamp(2.25rem, 4.5vw, 3.5rem)", lineHeight: 1.1, letterSpacing: "-0.015em" }}
             >
-              One institution. One standard. One <span className="text-brick">alignment</span> of interests.
+              One institution. One standard. One <span className="text-brick">alignment</span><br />of interests.
             </h2>
           </div>
           <div className="space-y-8 text-[17px] leading-relaxed text-aubergine md:col-span-6 md:col-start-7 md:text-[19px]">
             <p>
-              Geneva Life Holdings is a financial services platform built around a single organizing principle: alignment. Anchored by an established, regulated insurance business, the platform is expanding to include a broader set of institutional-quality offerings.
+              Geneva Life Holdings is a financial services platform built around a single organizing principle: alignment. Anchored by an established, regulated insurance business, the platform is expanding to include a broader set of institutional-quality&nbsp;offerings.
             </p>
             <p>
               What unifies the platform is not a product set. It is a standard – one we apply consistently across every entity, every relationship, and every interaction.

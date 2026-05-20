@@ -56,7 +56,7 @@ export function Approach() {
               <h3 className="mt-8 whitespace-pre-line font-display text-[24px] font-medium text-beige md:text-[28px]">
                 {p.title}
               </h3>
-              <p className="mt-4 text-[16px] leading-relaxed text-beige/75">{p.body}</p>
+              <p className="mt-4 text-[16px] leading-relaxed text-beige/75" style={{ textWrap: "pretty" }}>{p.body}</p>
             </div>
           ))}
         </div>

@@ -70,7 +70,7 @@ export function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute inset-x-0 bottom-8 flex flex-col items-center gap-3">
+      <div className="absolute inset-x-0 bottom-12 flex flex-col items-center gap-3">
         <EyebrowLabel className="text-sunset/80 text-[11px]">Scroll</EyebrowLabel>
         <motion.span
           className="block h-10 w-px bg-sunset"

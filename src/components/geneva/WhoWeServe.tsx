@@ -13,7 +13,7 @@ type Col = {
 const cols: Col[] = [
   {
     tag: "Advisors & Family Offices",
-    heading: "A partner that makes you more effective.",
+    heading: "A partner that makes you more\u00A0effective.",
     body: "RIAs, attorneys, and family offices choose Geneva because we make the complex parts of generational wealth planning easier to execute – and easier to defend with clients. Our structures are transparent. Our turnaround is fast. Our service model is built around the way you actually work.",
     proof: [
       "Direct access to leadership and decision-makers",

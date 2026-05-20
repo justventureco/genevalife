@@ -50,7 +50,7 @@ export function WhyGeneva() {
           {proofs.map((p) => (
             <div key={p.title} className="flex flex-col items-center text-center">
               <IconBadge icon={p.icon} tone="sunset" />
-              <h3 className="mt-6 font-display text-[22px] font-medium text-beige md:text-[24px]">
+              <h3 className="mt-6 whitespace-pre-line font-display text-[22px] font-medium text-beige md:text-[24px]">
                 {p.title}
               </h3>
               <p className="mt-4 max-w-[320px] text-[15px] leading-relaxed text-beige/80">

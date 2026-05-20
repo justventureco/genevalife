@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { EyebrowLabel } from "@/components/ui/EyebrowLabel";
 import { GenevaButton } from "@/components/ui/GenevaButton";
-import genevaGMark from "@/assets/geneva-g-mark.png";
+import { HexMosaic } from "@/components/geneva/HexMosaic";
 
 export function Hero() {
   return (
@@ -10,17 +10,11 @@ export function Hero() {
       className="relative isolate flex min-h-screen items-center overflow-hidden bg-aubergine pt-20"
       aria-labelledby="hero-heading"
     >
-      {/* G mark, desktop only */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute right-[6%] top-1/2 hidden -translate-y-1/2 opacity-55 lg:block"
-      >
-        <img
-          src={genevaGMark}
-          alt=""
-          className="h-auto w-[460px] xl:w-[560px] 2xl:w-[620px]"
-        />
+      {/* Hex mosaic, desktop only */}
+      <div className="pointer-events-none absolute right-[5%] top-1/2 hidden -translate-y-1/2 lg:block">
+        <HexMosaic className="scale-90 xl:scale-100 2xl:scale-110 origin-right" />
       </div>
+
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6 md:px-10">
         <div className="max-w-[640px]">

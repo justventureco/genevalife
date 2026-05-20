@@ -6,17 +6,17 @@ import { IconBadge } from "@/components/ui/IconBadge";
 const proofs = [
   {
     icon: BadgeCheck,
-    title: "Regulated & Established",
+    title: "Regulated &\nEstablished",
     body: "A long-standing, regulated insurance platform operating in a recognized international financial center.",
   },
   {
     icon: Landmark,
-    title: "Institutionally Capitalized",
+    title: "Institutionally\nCapitalized",
     body: "Backed by ownership and capital structures designed to support our commitments over the long term.",
   },
   {
     icon: Users,
-    title: "Directly Accessible Leadership",
+    title: "Directly Accessible\nLeadership",
     body: "A leadership team that is reachable, responsive, and accountable – by design, not by exception.",
   },
 ];

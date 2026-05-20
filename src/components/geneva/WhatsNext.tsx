@@ -43,11 +43,11 @@ export function WhatsNext() {
             <div
               key={s.n}
               className={
-                "grid grid-cols-1 items-center gap-6 py-10 md:grid-cols-12 md:gap-12 md:py-14 " +
+                "grid grid-cols-1 items-center gap-6 py-10 md:grid-cols-12 md:gap-8 md:py-14 " +
                 (i !== 0 ? "border-t border-beige/15" : "")
               }
             >
-              <div className="md:col-span-3">
+              <div className="md:col-span-2">
                 <div
                   className="font-display font-medium text-gradient-brand pb-2"
                   style={{ fontSize: "clamp(4.5rem, 10vw, 7.5rem)", letterSpacing: "-0.04em", lineHeight: 1.1 }}
@@ -55,7 +55,7 @@ export function WhatsNext() {
                   {s.n}
                 </div>
               </div>
-              <div className="md:col-span-9">
+              <div className="md:col-span-10">
                 <h3 className="font-display text-[28px] font-medium text-beige md:text-[36px]">
                   {s.title}
                 </h3>

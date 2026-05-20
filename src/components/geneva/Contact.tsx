@@ -77,13 +77,13 @@ export function Contact() {
               <p>
                 <a
                   href="mailto:info@geneva-ppli.com"
-                  className="text-brick transition-colors hover:text-sunset"
+                  className="text-aubergine transition-colors hover:text-sunset"
                 >
                   info@geneva-ppli.com
                 </a>
               </p>
               <p>
-                <a href="tel:+12466239700" className="text-brick transition-colors hover:text-sunset">
+                <a href="tel:+12466239700" className="text-aubergine transition-colors hover:text-sunset">
                   +1 246 623 9700
                 </a>
               </p>

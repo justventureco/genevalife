@@ -41,7 +41,7 @@ export function WhoWeServe() {
       as="section"
       id="who-we-serve"
       ariaLabel="Who we serve"
-      className="bg-white py-20 md:py-40"
+      className="bg-white py-16 md:py-28"
     >
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <div className="mx-auto max-w-[720px] text-center">

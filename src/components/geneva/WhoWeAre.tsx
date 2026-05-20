@@ -7,7 +7,7 @@ export function WhoWeAre() {
       as="section"
       id="who-we-are"
       ariaLabel="Who we are"
-      className="bg-beige py-20 md:py-40"
+      className="bg-beige py-16 md:py-28"
     >
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-8">

@@ -1,12 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Navigation } from "@/components/geneva/Navigation";
 import { Hero } from "@/components/geneva/Hero";
+import { MetricsStrip } from "@/components/geneva/MetricsStrip";
 import { WhoWeAre } from "@/components/geneva/WhoWeAre";
+import { OurPlatform } from "@/components/geneva/OurPlatform";
 import { Approach } from "@/components/geneva/Approach";
 import { WhoWeServe } from "@/components/geneva/WhoWeServe";
 import { WhyGeneva } from "@/components/geneva/WhyGeneva";
-import { TransformationAgenda } from "@/components/geneva/TransformationAgenda";
-import { WhatsNext } from "@/components/geneva/WhatsNext";
+import { Process } from "@/components/geneva/Process";
+import { GlobalFootprint } from "@/components/geneva/GlobalFootprint";
 import { Contact } from "@/components/geneva/Contact";
 import { Footer } from "@/components/geneva/Footer";
 

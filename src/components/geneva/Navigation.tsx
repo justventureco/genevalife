@@ -2,23 +2,17 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { GenevaButton } from "@/components/ui/GenevaButton";
 import { cn } from "@/lib/utils";
+import { NAV_LINKS } from "@/lib/constants";
 import genevaLogo from "@/assets/geneva-logo-inverted.png";
-
-const links = [
-  { label: "Who We Are", href: "#who-we-are" },
-  { label: "Our Approach", href: "#approach" },
-  { label: "Who We Serve", href: "#who-we-serve" },
-  { label: "Why Geneva", href: "#why-geneva" },
-  { label: "What's Next", href: "#whats-next" },
-];
-
 
 export function Navigation() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [open]);
 
   return (
@@ -27,16 +21,17 @@ export function Navigation() {
         aria-label="Primary"
         className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 md:h-20 md:px-10"
       >
+        {/* Replace with actual Geneva SVG logo */}
         <a href="#top" aria-label="Geneva Life Holdings home" className="flex items-center">
           <img src={genevaLogo} alt="Geneva" className="h-12 w-auto md:h-14" />
         </a>
 
         <ul className="hidden items-center gap-8 lg:flex">
-          {links.map((l) => (
+          {NAV_LINKS.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
-                className="group relative inline-block text-[16px] text-beige/80 transition-colors hover:text-beige"
+                className="group relative inline-block text-[14px] text-beige/80 transition-colors hover:text-beige"
               >
                 {l.label}
                 <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-sunset transition-transform duration-300 group-hover:scale-x-100" />
@@ -47,7 +42,7 @@ export function Navigation() {
 
         <div className="hidden lg:block">
           <GenevaButton href="#contact" size="compact">
-            Get in Touch
+            Contact
           </GenevaButton>
         </div>
 
@@ -69,7 +64,7 @@ export function Navigation() {
         )}
       >
         <ul className="flex h-full flex-col items-start gap-8 px-8 pt-16">
-          {links.map((l) => (
+          {NAV_LINKS.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
@@ -82,7 +77,7 @@ export function Navigation() {
           ))}
           <li className="pt-4">
             <GenevaButton href="#contact" size="default">
-              Get in Touch
+              Contact
             </GenevaButton>
           </li>
         </ul>

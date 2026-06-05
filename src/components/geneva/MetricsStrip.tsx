@@ -1,10 +1,10 @@
 import { SectionReveal } from "@/components/ui/SectionReveal";
 
 const metrics = [
-  { value: "2016", label: "Platform Established" },
-  { value: "~$2.5B", label: "Assets Across Our Operating Businesses" },
-  { value: "25", label: "Professionals" },
-  { value: "5", label: "Offices Around the World" },
+  { value: "2016", label: ["Platform", "Established"] },
+  { value: "~$2.5B", label: ["Assets Across Our", "Operating Businesses"] },
+  { value: "25", label: ["Professionals"] },
+  { value: "5", label: ["Offices Around", "the World"] },
 ];
 
 export function MetricsStrip() {

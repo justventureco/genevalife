@@ -7,7 +7,14 @@ const columns = [
   {
     tag: "Advisors & Family Offices",
     heading: "A partner that makes you more effective.",
-    body: "Advisors, attorneys, accountants, and family offices choose Geneva because we make the complex parts of sophisticated planning easier to execute; and easier to defend with clients. Our structures are transparent. Our turnaround is fast. Our service model is built around the way you actually work.",
+    body: (
+      <>
+        Advisors, attorneys, accountants, and family offices choose Geneva because we make the complex parts of sophisticated planning easier to execute; and easier to defend with clients.
+        <br />
+        <br />
+        Our structures are transparent. Our turnaround is fast. Our service model is built around the way you actually work.
+      </>
+    ),
     proof: [
       "Direct access to leadership and decision-makers",
       "Transparent structuring and reporting",

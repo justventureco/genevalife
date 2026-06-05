@@ -17,8 +17,9 @@ export function WhoWeAre() {
               className="mt-6 font-display font-medium text-aubergine"
               style={{ fontSize: "clamp(2.25rem, 4.5vw, 3.5rem)", lineHeight: 1.1, letterSpacing: "-0.015em" }}
             >
-              One institution. One <span className="italic text-brick">standard</span>. One alignment
-              of interests.
+              One institution. One <span className="italic text-brick">standard</span>. One
+              <br />
+              alignment of interests.
             </h2>
           </div>
           <div className="space-y-8 text-[17px] leading-[1.65] text-aubergine md:col-span-6 md:col-start-7 md:text-[19px]">

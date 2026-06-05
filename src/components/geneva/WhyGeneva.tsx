@@ -8,16 +8,19 @@ const proofs = [
     icon: BadgeCheck,
     title: "Regulated & Established",
     body: "Anchored by an established life insurance carrier with a decade of operating history.",
+    maxW: 320,
   },
   {
     icon: Landmark,
     title: "Institutionally Capitalized",
     body: "Backed by ownership and capital structures designed to support our commitments over the long term.",
+    maxW: 280,
   },
   {
     icon: Users,
     title: "Directly Accessible Leadership",
     body: "A leadership team that is reachable, responsive, and accountable; by design, not by exception.",
+    maxW: 280,
   },
 ];
 

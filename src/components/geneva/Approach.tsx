@@ -50,7 +50,7 @@ export function Approach() {
               className="group border border-aubergine/10 p-10 transition-all duration-500 hover:-translate-y-1 hover:border-brick"
             >
               <div className="flex items-center justify-between">
-                <HexIcon Icon={p.icon} size={56} className="text-brick" iconClassName="text-aubergine" />
+                <HexIcon Icon={p.icon} size={56} className="text-brick" iconClassName="text-sunset" />
                 <span className="font-display text-[22px] font-medium text-brick">{p.n}</span>
               </div>
               <h3 className="mt-6 font-display text-[24px] font-medium text-aubergine md:text-[28px]">

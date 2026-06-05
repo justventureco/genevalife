@@ -38,12 +38,14 @@ function Index() {
       <Navigation />
       <main>
         <Hero />
+        <MetricsStrip />
         <WhoWeAre />
+        <OurPlatform />
         <Approach />
         <WhoWeServe />
         <WhyGeneva />
-        <TransformationAgenda />
-        <WhatsNext />
+        <Process />
+        <GlobalFootprint />
         <Contact />
       </main>
       <Footer />

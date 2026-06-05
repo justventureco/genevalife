@@ -59,7 +59,7 @@ export function Footer() {
             Reserve approximately 4-6 lines of text. Plain prose, no formatting. */}
         <div className="max-w-[900px] py-6">
           <p className="text-[12px] text-beige/55" style={{ lineHeight: 1.6 }}>
-            [Disclosure language to be provided by counsel — holding company / operating subsidiary
+            [Disclosure language to be provided by counsel; holding company and operating subsidiary
             structure clarification.]
           </p>
         </div>

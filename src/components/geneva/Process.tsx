@@ -23,13 +23,13 @@ export function Process() {
   return (
     <SectionReveal
       as="section"
-      id="process"
-      ariaLabel="Our process"
+      id="engagement"
+      ariaLabel="Our engagement"
       className="bg-aubergine py-24 md:py-32"
     >
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <div className="mx-auto max-w-[720px] text-center">
-          <EyebrowLabel className="text-sunset">Process</EyebrowLabel>
+          <EyebrowLabel className="text-sunset">Engagement</EyebrowLabel>
           <h2
             className="mt-6 font-display font-medium text-beige"
             style={{ fontSize: "clamp(2.25rem, 4.5vw, 3.5rem)", lineHeight: 1.1, letterSpacing: "-0.015em" }}

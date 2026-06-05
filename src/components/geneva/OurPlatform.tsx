@@ -1,36 +1,38 @@
+import { UserPlus, Settings, FileText, ShieldCheck, Layers, KeyRound } from "lucide-react";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { EyebrowLabel } from "@/components/ui/EyebrowLabel";
+import { HexIcon } from "@/components/ui/HexIcon";
 import genevaGMark from "@/assets/geneva-g-mark.png";
 
 const tiles = [
   {
-    roman: "I",
-    title: "Onboarding & New Business",
+    Icon: UserPlus,
+    titleLines: ["Onboarding &", "New Business"],
     body: "Transparent at every step. Calibrated to the families and advisors we serve.",
   },
   {
-    roman: "II",
-    title: "Service & Administration",
+    Icon: Settings,
+    titleLines: ["Service &", "Administration"],
     body: "Modernized systems, dedicated points of contact, calibrated service standards.",
   },
   {
-    roman: "III",
-    title: "Reporting & Statements",
+    Icon: FileText,
+    titleLines: ["Reporting &", "Statements"],
     body: "Clearer, more frequent, more useful.",
   },
   {
-    roman: "IV",
-    title: "Compliance & Regulatory Rigor",
+    Icon: ShieldCheck,
+    titleLines: ["Compliance &", "Regulatory Rigor"],
     body: "Institutional standards as the baseline, not the ceiling.",
   },
   {
-    roman: "V",
-    title: "Platform Expansion",
+    Icon: Layers,
+    titleLines: ["Platform", "Expansion"],
     body: "An expanded set of institutional-quality capabilities, anchored by our life insurance carrier.",
   },
   {
-    roman: "VI",
-    title: "Leadership Access",
+    Icon: KeyRound,
+    titleLines: ["Leadership", "Access"],
     body: "Direct lines, clear escalation, no surprises.",
   },
 ];
@@ -68,15 +70,17 @@ export function OurPlatform() {
         <div aria-hidden style={{ height: 80 }} />
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8">
-          {tiles.map((t) => (
+          {tiles.map((t, i) => (
             <div
-              key={t.roman}
+              key={i}
               className="group border border-beige/15 bg-transparent p-10 transition-all duration-500 hover:-translate-y-1 hover:border-sunset"
             >
-              <div className="mb-6 font-display font-medium text-brick" style={{ fontSize: "22px" }}>
-                {t.roman}
-              </div>
-              <h3 className="font-display text-[24px] font-medium text-beige">{t.title}</h3>
+              <HexIcon Icon={t.Icon} size={64} strokeColor="currentColor" className="mb-6 text-sunset" iconClassName="text-sunset" />
+              <h3 className="font-display text-[24px] font-medium text-beige">
+                {t.titleLines[0]}
+                <br />
+                {t.titleLines[1]}
+              </h3>
               <p className="mt-4 text-[15px] text-beige/75" style={{ lineHeight: 1.6 }}>
                 {t.body}
               </p>

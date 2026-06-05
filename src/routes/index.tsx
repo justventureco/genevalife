@@ -15,7 +15,7 @@ import { Footer } from "@/components/geneva/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Geneva Life Holdings — A Platform for Private Wealth" },
+      { title: "Geneva Life Holdings: A Platform for Private Wealth" },
       {
         name: "description",
         content:

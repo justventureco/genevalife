@@ -49,7 +49,7 @@ export function Contact() {
         <div className="grid grid-cols-1 gap-16 md:grid-cols-12 md:gap-12">
           {/* Left column */}
           <div className="md:col-span-5">
-            <EyebrowLabel className="text-brick">Contact</EyebrowLabel>
+            <EyebrowLabel className="text-brick">Get in Touch</EyebrowLabel>
             <h2
               className="mt-6 font-display font-medium text-aubergine"
               style={{ fontSize: "clamp(2.25rem, 4.5vw, 3.5rem)", lineHeight: 1.1, letterSpacing: "-0.015em" }}

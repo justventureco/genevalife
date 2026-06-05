@@ -48,6 +48,7 @@ export function WhyGeneva() {
         <div className="mt-20 grid grid-cols-1 gap-12 md:grid-cols-3">
           {proofs.map((p) => (
             <div key={p.title} className="text-center">
+              <HexIcon Icon={p.icon} size={60} className="mx-auto mb-6 text-sunset" iconClassName="text-beige" />
               <h3 className="font-display text-[22px] font-medium text-beige md:text-[24px]">
                 {p.title}
               </h3>

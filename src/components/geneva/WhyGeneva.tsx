@@ -1,16 +1,21 @@
+import { BadgeCheck, Landmark, Users } from "lucide-react";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { EyebrowLabel } from "@/components/ui/EyebrowLabel";
+import { HexIcon } from "@/components/ui/HexIcon";
 
 const proofs = [
   {
+    icon: BadgeCheck,
     title: "Regulated & Established",
     body: "Anchored by an established life insurance carrier with a decade of operating history.",
   },
   {
+    icon: Landmark,
     title: "Institutionally Capitalized",
     body: "Backed by ownership and capital structures designed to support our commitments over the long term.",
   },
   {
+    icon: Users,
     title: "Directly Accessible Leadership",
     body: "A leadership team that is reachable, responsive, and accountable; by design, not by exception.",
   },
@@ -43,6 +48,7 @@ export function WhyGeneva() {
         <div className="mt-20 grid grid-cols-1 gap-12 md:grid-cols-3">
           {proofs.map((p) => (
             <div key={p.title} className="text-center">
+              <HexIcon Icon={p.icon} size={60} className="mx-auto mb-6 text-sunset" iconClassName="text-beige" />
               <h3 className="font-display text-[22px] font-medium text-beige md:text-[24px]">
                 {p.title}
               </h3>

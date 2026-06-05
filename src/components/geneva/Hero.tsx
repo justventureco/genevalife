@@ -58,7 +58,15 @@ export function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute inset-x-0 bottom-12 flex flex-col items-center gap-3">
+      <div
+        className="absolute inset-x-0 bottom-12 flex flex-col items-center gap-3 cursor-pointer"
+        onClick={() => {
+          const el = document.getElementById("who-we-are");
+          if (el) el.scrollIntoView({ behavior: "smooth" });
+        }}
+        role="button"
+        aria-label="Scroll to content"
+      >
         <EyebrowLabel className="text-sunset/80 text-[11px]">Scroll</EyebrowLabel>
         <motion.span
           className="block h-10 w-px bg-sunset"

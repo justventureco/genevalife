@@ -21,18 +21,25 @@ const columns = [
       "Dedicated coverage for active relationships",
       "Channel partnerships for advisors building book at scale",
     ],
-    cta: { label: "Partner with Geneva", href: "#contact", variant: "peer" as const },
+    cta: { label: "Partner with Geneva", href: "#contact", variant: "primary" as const },
   },
   {
     tag: "Families & Institutional Counterparties",
     heading: "A platform built to carry wealth forward.",
-    body: "Families work with Geneva to protect, optimize, and carry forward what has taken a lifetime; sometimes generations; to build. Institutional counterparties work with the platform where it makes sense to. In both cases, we bring discretion to every conversation, discipline to every structure, and continuity to every relationship.",
+    body: (
+      <>
+        Families work with Geneva to protect, optimize, and carry forward what has taken a lifetime - sometimes generations - to build.
+        <br />
+        <br />
+        Institutional counterparties work with the platform where it makes sense to. In both cases, we bring discretion to every conversation, discipline to every structure, and continuity to every relationship.
+      </>
+    ),
     proof: [
       "Discretion as an operating standard, not a promise",
       "Solutions designed for continuity across generations",
       "Service calibrated to the relationships we serve",
     ],
-    cta: { label: "Contact", href: "#contact", variant: "primary" as const },
+    cta: { label: "Partner with Geneva", href: "#contact", variant: "primary" as const },
   },
 ];
 

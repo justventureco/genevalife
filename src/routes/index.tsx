@@ -40,10 +40,10 @@ function Index() {
         <Hero />
         <MetricsStrip />
         <WhoWeAre />
+        <WhyGeneva />
         <OurPlatform />
         <Approach />
         <WhoWeServe />
-        <WhyGeneva />
         <Process />
         <GlobalFootprint />
         <Contact />

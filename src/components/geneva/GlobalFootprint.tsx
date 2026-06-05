@@ -30,12 +30,12 @@ export function GlobalFootprint() {
           </h2>
         </div>
 
-        <div className="mx-auto mt-12 w-full max-w-[720px]">
+        <div className="mx-auto mt-12 w-full max-w-[1080px]">
           {mounted && (
             <ComposableMap
-              projectionConfig={{ scale: 145 }}
-              width={800}
-              height={400}
+              projectionConfig={{ scale: 170 }}
+              width={980}
+              height={440}
               style={{ width: "100%", height: "auto" }}
             >
               <Geographies geography={GEO_URL}>

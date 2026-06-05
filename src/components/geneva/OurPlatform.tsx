@@ -27,8 +27,8 @@ const tiles = [
   },
   {
     Icon: Umbrella,
-    titleLines: ["Life Insurance Carrier"],
-    body: "Geneva International Life is the foundation of the platform. Purpose-built to structure, protect, and carry private wealth forward across generations.",
+    titleLines: ["Life Insurance", "Carrier"],
+    body: "The foundation of the platform, Geneva International Life is purpose-built to structure, protect, and carry private wealth forward.",
   },
   {
     Icon: Layers,

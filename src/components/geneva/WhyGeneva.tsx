@@ -30,7 +30,7 @@ export function WhyGeneva() {
       className="bg-wine py-24 md:py-32"
     >
       <div className="mx-auto max-w-6xl px-6 md:px-10">
-        <div className="mx-auto max-w-[760px] text-center">
+        <div className="mx-auto text-center">
           <EyebrowLabel className="text-sunset">Why Geneva</EyebrowLabel>
           <h2
             className="mt-6 font-display font-medium text-beige"

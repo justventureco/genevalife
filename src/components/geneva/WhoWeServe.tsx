@@ -28,10 +28,10 @@ const columns = [
     heading: "A platform built to carry wealth forward.",
     body: (
       <>
-        Families work with Geneva to protect, optimize, and carry forward what has taken a lifetime - sometimes generations - to build.
+        Families work with Geneva to protect, optimize, and carry forward what has taken a lifetime - sometimes generations - to build. Institutional counterparties work with the platform where it makes sense to.
         <br />
         <br />
-        Institutional counterparties work with the platform where it makes sense to. In both cases, we bring discretion to every conversation, discipline to every structure, and continuity to every relationship.
+        In both cases, we bring discretion to every conversation, discipline to every structure, and continuity to every relationship.
       </>
     ),
     proof: [

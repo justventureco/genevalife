@@ -11,7 +11,7 @@ export const NAV_LINKS = [
   { label: "Platform", href: "#platform" },
   { label: "Approach", href: "#approach" },
   { label: "Who We Serve", href: "#who-we-serve" },
-  { label: "Process", href: "#process" },
+  { label: "Engagement", href: "#engagement" },
 ];
 
 export const CONTACT = {

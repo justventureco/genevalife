@@ -1,4 +1,4 @@
-import { UserPlus, Settings, FileText, ShieldCheck, Layers, KeyRound } from "lucide-react";
+import { UserPlus, Settings, FileText, ShieldCheck, Layers, Umbrella } from "lucide-react";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { EyebrowLabel } from "@/components/ui/EyebrowLabel";
 import { HexIcon } from "@/components/ui/HexIcon";
@@ -6,37 +6,31 @@ import genevaGMark from "@/assets/geneva-g-mark.png";
 
 const tiles = [
   {
-    roman: "I",
     Icon: UserPlus,
     titleLines: ["Onboarding &", "New Business"],
     body: "Transparent at every step. Calibrated to the families and advisors we serve.",
   },
   {
-    roman: "II",
     Icon: Settings,
     titleLines: ["Service &", "Administration"],
     body: "Modernized systems, dedicated points of contact, calibrated service standards.",
   },
   {
-    roman: "III",
     Icon: FileText,
     titleLines: ["Reporting &", "Statements"],
     body: "Clearer, more frequent, more useful.",
   },
   {
-    roman: "IV",
     Icon: ShieldCheck,
     titleLines: ["Compliance &", "Regulatory Rigor"],
     body: "Institutional standards as the baseline, not the ceiling.",
   },
   {
-    roman: "V",
+    Icon: Umbrella,
     titleLines: ["Geneva International Insurance"],
     body: "Our life insurance carrier and the foundation of the platform. Purpose-built to structure, protect, and carry private wealth forward across generations.",
-    isCarrier: true,
   },
   {
-    roman: "VI",
     Icon: Layers,
     titleLines: ["Platform", "Expansion"],
     body: "An expanded set of institutional-quality capabilities, anchored by our life insurance carrier.",

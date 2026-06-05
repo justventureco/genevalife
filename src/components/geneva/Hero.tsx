@@ -47,8 +47,10 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.8 }}
           >
-            <GenevaButton href="#contact">Start a Conversation</GenevaButton>
-            <GenevaButton href="#platform" variant="ghost-sunset">
+            <GenevaButton href="#contact" variant="outline-white">
+              Start a Conversation
+            </GenevaButton>
+            <GenevaButton href="#platform" variant="outline-white">
               See the Platform
             </GenevaButton>
           </motion.div>

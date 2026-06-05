@@ -14,7 +14,7 @@ const proofs = [
     icon: Landmark,
     title: "Institutionally Capitalized",
     body: "Backed by ownership and capital structures designed to support our commitments over the long term.",
-    maxW: 280,
+    maxW: 320,
   },
   {
     icon: Users,

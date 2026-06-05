@@ -5,19 +5,17 @@ import { HexIcon } from "@/components/ui/HexIcon";
 
 const pillars = [
   {
-    n: "01",
     icon: Shield,
     title: <>Institutional<br />Discipline</>,
     body: "We operate with the governance, oversight, and operating rigor expected by the families and advisors we serve. Institutional standards are our baseline, not our ceiling.",
   },
   {
-    n: "02",
     icon: HandHeart,
     title: <>White-Glove<br />Partnership</>,
+    title: "White-Glove Partnership",
     body: "Proactive service, dedicated coverage on our key relationships, faster turnaround on what matters most, and a leadership team that is reachable, responsive, and accountable.",
   },
   {
-    n: "03",
     icon: Scale,
     title: <>Aligned<br />Interests</>,
     body: "At every layer of the structure, our interests are aligned with the interests of the people we serve. No mixed incentives. No competing priorities. One platform. One standard.",

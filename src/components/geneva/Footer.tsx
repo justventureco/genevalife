@@ -1,15 +1,8 @@
 import { EyebrowLabel } from "@/components/ui/EyebrowLabel";
 import genevaLogo from "@/assets/geneva-logo-inverted.png";
+import { NAV_LINKS, CONTACT } from "@/lib/constants";
 
-
-const navLinks = [
-  { label: "Who We Are", href: "#who-we-are" },
-  { label: "Approach", href: "#approach" },
-  { label: "Who We Serve", href: "#who-we-serve" },
-  { label: "Why Geneva", href: "#why-geneva" },
-  { label: "What's Next", href: "#whats-next" },
-  { label: "Contact", href: "#contact" },
-];
+const navLinks = [...NAV_LINKS, { label: "Contact", href: "#contact" }];
 
 export function Footer() {
   return (
@@ -17,23 +10,30 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <div className="grid grid-cols-1 gap-12 py-16 md:grid-cols-3 md:gap-8">
           <div>
-            <img src={genevaLogo} alt="Geneva" className="h-14 w-auto md:h-16" />
+            {/* Replace with actual Geneva SVG logo */}
+            <img src={genevaLogo} alt="Geneva Life Holdings" className="h-14 w-auto md:h-16" />
+            <address className="mt-6 not-italic text-[14px] text-beige/75" style={{ lineHeight: 1.7 }}>
+              Geneva Life Holdings
+              <br />
+              2nd Floor, One Welches
+              <br />
+              Welches, St. Thomas
+              <br />
+              Barbados BB22025
+            </address>
           </div>
 
           <div>
             <EyebrowLabel className="text-sunset">Contact</EyebrowLabel>
             <ul className="mt-6 space-y-3 text-[14px] text-beige/80">
               <li>
-                <a href="tel:+12466239700" className="transition-colors hover:text-beige">
-                  +1 246 623 9700
+                <a href={CONTACT.phoneHref} className="transition-colors hover:text-beige">
+                  {CONTACT.phone}
                 </a>
               </li>
               <li>
-                <a
-                  href="mailto:info@geneva-ppli.com"
-                  className="transition-colors hover:text-beige"
-                >
-                  info@geneva-ppli.com
+                <a href={`mailto:${CONTACT.email}`} className="transition-colors hover:text-beige">
+                  {CONTACT.email}
                 </a>
               </li>
             </ul>
@@ -55,7 +55,18 @@ export function Footer() {
 
         <div className="h-px w-full bg-beige/15" />
 
-        <div className="flex flex-col items-start justify-between gap-4 py-8 md:flex-row md:items-center">
+        {/* DISCLOSURE PARAGRAPH — counsel-supplied wording pending.
+            Reserve approximately 4-6 lines of text. Plain prose, no formatting. */}
+        <div className="max-w-[900px] py-6">
+          <p className="text-[12px] text-beige/55" style={{ lineHeight: 1.6 }}>
+            [Disclosure language to be provided by counsel; holding company and operating subsidiary
+            structure clarification.]
+          </p>
+        </div>
+
+        <div className="h-px w-full bg-beige/15" />
+
+        <div className="flex flex-col items-start justify-between gap-4 py-6 md:flex-row md:items-center">
           <p className="text-[13px] text-beige/60">
             © 2026 Geneva Life Holdings. All rights reserved.
           </p>

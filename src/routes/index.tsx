@@ -1,29 +1,31 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Navigation } from "@/components/geneva/Navigation";
 import { Hero } from "@/components/geneva/Hero";
+import { MetricsStrip } from "@/components/geneva/MetricsStrip";
 import { WhoWeAre } from "@/components/geneva/WhoWeAre";
+import { OurPlatform } from "@/components/geneva/OurPlatform";
 import { Approach } from "@/components/geneva/Approach";
 import { WhoWeServe } from "@/components/geneva/WhoWeServe";
 import { WhyGeneva } from "@/components/geneva/WhyGeneva";
-import { TransformationAgenda } from "@/components/geneva/TransformationAgenda";
-import { WhatsNext } from "@/components/geneva/WhatsNext";
+import { Process } from "@/components/geneva/Process";
+import { GlobalFootprint } from "@/components/geneva/GlobalFootprint";
 import { Contact } from "@/components/geneva/Contact";
 import { Footer } from "@/components/geneva/Footer";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Geneva Life Holdings — Sophisticated wealth deserves sophisticated structure" },
+      { title: "Geneva Life Holdings: A Platform for Private Wealth" },
       {
         name: "description",
         content:
-          "Geneva Life Holdings is a financial services holding company helping families, advisors, and family offices structure, protect, and carry generational wealth forward.",
+          "Geneva Life Holdings is a financial services platform helping families, advisors, and family offices structure, protect, and carry private wealth forward.",
       },
       { property: "og:title", content: "Geneva Life Holdings" },
       {
         property: "og:description",
         content:
-          "An institutional platform built for HNW families, RIAs, attorneys, and family offices.",
+          "A platform built for HNW families, family offices, RIAs, attorneys, accountants, and institutional counterparties.",
       },
     ],
   }),
@@ -36,12 +38,14 @@ function Index() {
       <Navigation />
       <main>
         <Hero />
+        <MetricsStrip />
         <WhoWeAre />
+        <OurPlatform />
         <Approach />
         <WhoWeServe />
         <WhyGeneva />
-        <TransformationAgenda />
-        <WhatsNext />
+        <Process />
+        <GlobalFootprint />
         <Contact />
       </main>
       <Footer />

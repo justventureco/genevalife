@@ -42,7 +42,7 @@ export function Navigation() {
 
         <div className="hidden lg:block">
           <GenevaButton href="#contact" variant="outline-white" size="compact">
-            Contact
+            Get in Touch
           </GenevaButton>
         </div>
 
@@ -77,7 +77,7 @@ export function Navigation() {
           ))}
           <li className="pt-4">
             <GenevaButton href="#contact" variant="outline-white" size="default">
-              Contact
+              Get in Touch
             </GenevaButton>
           </li>
         </ul>

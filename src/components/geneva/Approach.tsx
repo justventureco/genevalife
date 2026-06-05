@@ -12,7 +12,6 @@ const pillars = [
   {
     icon: HandHeart,
     title: <>White-Glove<br />Partnership</>,
-    title: "White-Glove Partnership",
     body: "Proactive service, dedicated coverage on our key relationships, faster turnaround on what matters most, and a leadership team that is reachable, responsive, and accountable.",
   },
   {
@@ -42,15 +41,12 @@ export function Approach() {
         </div>
 
         <div className="mt-20 grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
-          {pillars.map((p) => (
+          {pillars.map((p, i) => (
             <div
-              key={p.n}
+              key={i}
               className="group border border-aubergine/10 p-10 transition-all duration-500 hover:-translate-y-1 hover:border-brick"
             >
-              <div className="flex items-center justify-between">
-                <HexIcon Icon={p.icon} size={56} className="text-brick" iconClassName="text-sunset" />
-                <span className="font-display text-[22px] font-medium text-brick">{p.n}</span>
-              </div>
+              <HexIcon Icon={p.icon} size={56} className="text-brick" iconClassName="text-brick" />
               <h3 className="mt-6 font-display text-[24px] font-medium text-aubergine md:text-[28px]">
                 {p.title}
               </h3>

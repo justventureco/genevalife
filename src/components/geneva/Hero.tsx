@@ -1,7 +1,6 @@
 import { motion } from "motion/react";
 import { EyebrowLabel } from "@/components/ui/EyebrowLabel";
 import { GenevaButton } from "@/components/ui/GenevaButton";
-import { HexLogo } from "@/components/geneva/HexLogo";
 
 export function Hero() {
   return (
@@ -10,13 +9,6 @@ export function Hero() {
       className="relative isolate flex min-h-screen items-center overflow-hidden bg-aubergine pt-20"
       aria-labelledby="hero-heading"
     >
-      {/* Oversized gradient hexagon bleeding off the right edge — desktop only */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-[12%] top-1/2 hidden -translate-y-1/2 opacity-60 lg:block"
-      >
-        <HexLogo size={760} gradient />
-      </div>
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6 md:px-10">
         <div className="max-w-[640px] pb-28">
@@ -55,7 +47,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.8 }}
           >
-            <GenevaButton href="#contact">Contact</GenevaButton>
+            <GenevaButton href="#contact">Start a Conversation</GenevaButton>
             <GenevaButton href="#platform" variant="ghost-sunset">
               See the Platform
             </GenevaButton>

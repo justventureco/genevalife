@@ -52,7 +52,7 @@ export function WhoWeServe() {
       className="bg-white py-28 md:py-36"
     >
       <div className="mx-auto max-w-6xl px-6 md:px-10">
-        <div className="mx-auto max-w-[720px] text-center">
+        <div className="mx-auto text-center">
           <EyebrowLabel className="text-brick">Who We Serve</EyebrowLabel>
           <h2
             className="mt-6 font-display font-medium text-aubergine"

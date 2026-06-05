@@ -39,7 +39,7 @@ const columns = [
       "Solutions designed for continuity across generations",
       "Service calibrated to the relationships we serve",
     ],
-    cta: { label: "Partner with Geneva", href: "#contact", variant: "primary" as const },
+    cta: { label: "Start a Conversation", href: "#contact", variant: "primary" as const },
   },
 ];
 

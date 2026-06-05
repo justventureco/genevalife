@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { EyebrowLabel } from "@/components/ui/EyebrowLabel";
 import { GenevaButton } from "@/components/ui/GenevaButton";
-import { HexMosaic } from "@/components/geneva/HexMosaic";
+import { HexLogo } from "@/components/geneva/HexLogo";
 
 export function Hero() {
   return (
@@ -10,14 +10,16 @@ export function Hero() {
       className="relative isolate flex min-h-screen items-center overflow-hidden bg-aubergine pt-20"
       aria-labelledby="hero-heading"
     >
-      {/* Hex mosaic, desktop only */}
-      <div className="pointer-events-none absolute right-[10%] top-1/2 hidden -translate-y-1/2 lg:block">
-        <HexMosaic className="scale-90 xl:scale-95 2xl:scale-100 origin-right" />
+      {/* Oversized gradient hexagon bleeding off the right edge — desktop only */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-[12%] top-1/2 hidden -translate-y-1/2 opacity-60 lg:block"
+      >
+        <HexLogo size={760} gradient />
       </div>
 
-
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6 md:px-10">
-        <div className="max-w-[760px] pb-28">
+        <div className="max-w-[640px] pb-28">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -29,30 +31,22 @@ export function Hero() {
           <motion.h1
             id="hero-heading"
             className="mt-8 font-display font-medium text-beige"
-            style={{
-              fontSize: "clamp(2.75rem, 6vw, 4.25rem)",
-              lineHeight: 1.05,
-              letterSpacing: "-0.02em",
-            }}
+            style={{ fontSize: "clamp(2.75rem, 6vw, 4.75rem)", lineHeight: 1.05, letterSpacing: "-0.02em" }}
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
           >
-            Sophisticated
-            <br />
-            wealth deserves
-            <br />
-            sophisticated structure.
+            Structure <span className="italic text-brick">equal</span> to the wealth it carries.
           </motion.h1>
 
           <motion.p
-            className="mt-8 text-[17px] leading-relaxed text-beige/75 md:text-[19px]"
+            className="mt-8 text-[17px] leading-[1.6] text-beige/75 md:text-[19px]"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.6 }}
           >
             A financial services platform built to help families, advisors, and family offices
-            structure, protect, and carry generational wealth forward.
+            structure, protect, and carry private wealth forward.
           </motion.p>
 
           <motion.div
@@ -61,9 +55,9 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.8 }}
           >
-            <GenevaButton href="#contact">Start a Conversation</GenevaButton>
-            <GenevaButton href="#approach" variant="ghost-sunset">
-              How We Work
+            <GenevaButton href="#contact">Contact</GenevaButton>
+            <GenevaButton href="#platform" variant="ghost-sunset">
+              See the Platform
             </GenevaButton>
           </motion.div>
         </div>

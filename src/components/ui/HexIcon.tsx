@@ -30,7 +30,7 @@ export function HexIcon({
         aria-hidden="true"
       >
         <polygon
-          points="50,4 92,27 92,73 50,96 8,73 8,27"
+          points="4,50 27,8 73,8 96,50 73,92 27,92"
           fill="none"
           stroke={strokeColor}
           strokeWidth="2"

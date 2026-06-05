@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { forwardRef } from "react";
 
-type Variant = "primary" | "peer" | "ghost-sunset";
+type Variant = "primary" | "peer" | "ghost-sunset" | "outline-white";
 type Size = "default" | "compact";
 
 type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -21,6 +21,8 @@ const variants: Record<Variant, string> = {
   peer: "border border-brick text-brick bg-transparent hover:bg-brick hover:text-white",
   // Sunset border + sunset text on dark; gradient sweep + white text on hover.
   "ghost-sunset": "border border-sunset text-sunset bg-transparent hover:text-white",
+  // White border + white text on dark; gradient sweep on hover.
+  "outline-white": "border border-white text-white bg-transparent hover:text-white",
 };
 
 const sizes: Record<Size, string> = {
@@ -32,7 +34,7 @@ export const GenevaButton = forwardRef<HTMLAnchorElement | HTMLButtonElement, Pr
   ({ variant = "primary", size = "default", className, children, href, ...props }, ref) => {
     const classes = cn(base, variants[variant], sizes[size], className);
     const tracking = { letterSpacing: "0.12em" } as React.CSSProperties;
-    const sweep = variant === "primary" || variant === "ghost-sunset";
+    const sweep = variant === "primary" || variant === "ghost-sunset" || variant === "outline-white";
 
     const inner = (
       <>

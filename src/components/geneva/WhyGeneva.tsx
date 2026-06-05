@@ -1,16 +1,21 @@
+import { BadgeCheck, Landmark, Users } from "lucide-react";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { EyebrowLabel } from "@/components/ui/EyebrowLabel";
+import { HexIcon } from "@/components/ui/HexIcon";
 
 const proofs = [
   {
+    icon: BadgeCheck,
     title: "Regulated & Established",
     body: "Anchored by an established life insurance carrier with a decade of operating history.",
   },
   {
+    icon: Landmark,
     title: "Institutionally Capitalized",
     body: "Backed by ownership and capital structures designed to support our commitments over the long term.",
   },
   {
+    icon: Users,
     title: "Directly Accessible Leadership",
     body: "A leadership team that is reachable, responsive, and accountable; by design, not by exception.",
   },

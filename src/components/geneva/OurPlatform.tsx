@@ -73,15 +73,7 @@ export function OurPlatform() {
               key={i}
               className="group border border-beige/15 bg-transparent p-10 transition-all duration-500 hover:-translate-y-1 hover:border-sunset"
             >
-              {t.Icon && (
-                <HexIcon Icon={t.Icon} size={64} strokeColor="currentColor" className="mb-6 text-sunset" iconClassName="text-sunset" />
-              )}
-              <div
-                className={`font-display text-[22px] font-medium ${t.isCarrier ? "text-sunset" : "text-brick"}`}
-                style={{ marginBottom: t.Icon ? 12 : 16 }}
-              >
-                {t.roman}
-              </div>
+              <HexIcon Icon={t.Icon} size={64} strokeColor="currentColor" className="mb-6 text-sunset" iconClassName="text-sunset" />
               <h3 className="font-display text-[24px] font-medium text-beige">
                 {t.titleLines.map((line, li) => (
                   <span key={li}>

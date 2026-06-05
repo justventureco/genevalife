@@ -54,7 +54,7 @@ export function WhyGeneva() {
               <h3 className="font-display text-[22px] font-medium text-beige md:text-[24px]">
                 {p.title}
               </h3>
-              <p className="mx-auto mt-4 max-w-[320px] text-[15px] leading-[1.65] text-beige/80">
+              <p className="mx-auto mt-4 text-[15px] leading-[1.65] text-beige/80" style={{ maxWidth: p.maxW }}>
                 {p.body}
               </p>
             </div>

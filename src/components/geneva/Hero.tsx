@@ -56,7 +56,25 @@ export function Hero() {
             </GenevaButton>
           </motion.div>
         </div>
+
+        <motion.div
+          className="relative hidden lg:block"
+          initial={{ opacity: 0, scale: 0.96, y: 24 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 0.5, ease: "easeOut" }}
+        >
+          <div className="relative overflow-hidden rounded-[2rem] shadow-2xl ring-1 ring-beige/10">
+            <img
+              src={heroEstate}
+              alt="A multi-generational family walking together on the grounds of their family estate at golden hour"
+              className="h-[560px] w-full object-cover"
+              loading="eager"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-aubergine/40 via-transparent to-transparent" />
+          </div>
+        </motion.div>
       </div>
+
 
       {/* Scroll indicator */}
       <div

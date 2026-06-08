@@ -10,6 +10,18 @@ export function Hero() {
       className="relative isolate flex min-h-screen items-center overflow-hidden bg-aubergine pt-20"
       aria-labelledby="hero-heading"
     >
+      {/* Full-bleed hero image on the right */}
+      <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 lg:block">
+        <img
+          src={heroEstate}
+          alt="A multi-generational family walking together on the grounds of their family estate at golden hour"
+          className="h-full w-full object-cover"
+          loading="eager"
+        />
+        {/* Fade into the aubergine background on the left edge and bottom */}
+        <div className="absolute inset-0 bg-gradient-to-r from-aubergine via-aubergine/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-aubergine/60 via-transparent to-transparent" />
+      </div>
 
       <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 px-6 md:px-10 lg:grid-cols-2 lg:gap-16">
         <div className="max-w-[640px] pb-28 lg:pb-0">
@@ -29,7 +41,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
           >
-            Structure <span className="italic text-brick">equal</span> to the wealth it carries.
+            Structure <span className="italic text-brick">Equal</span> to the Wealth It Carries.
           </motion.h1>
 
           <motion.p
@@ -56,34 +68,12 @@ export function Hero() {
             </GenevaButton>
           </motion.div>
         </div>
-
-        <motion.div
-          className="relative hidden lg:flex lg:items-center lg:justify-center"
-          initial={{ opacity: 0, scale: 0.96, y: 24 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.5, ease: "easeOut" }}
-        >
-          <div className="relative w-full max-w-[420px] overflow-hidden rounded-[2rem] shadow-2xl ring-1 ring-beige/10"
-               style={{
-                 maskImage: "radial-gradient(ellipse 85% 85% at center, black 55%, transparent 100%)",
-                 WebkitMaskImage: "radial-gradient(ellipse 85% 85% at center, black 55%, transparent 100%)",
-               }}
-          >
-            <img
-              src={heroEstate}
-              alt="A multi-generational family walking together on the grounds of their family estate at golden hour"
-              className="h-[440px] w-full object-cover"
-              loading="eager"
-            />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-aubergine/40 via-transparent to-transparent" />
-          </div>
-        </motion.div>
       </div>
 
 
       {/* Scroll indicator */}
       <div
-        className="absolute inset-x-0 bottom-12 flex flex-col items-center gap-3 cursor-pointer"
+        className="absolute inset-x-0 bottom-6 flex flex-col items-center gap-3 cursor-pointer"
         onClick={() => {
           const el = document.getElementById("who-we-are");
           if (el) el.scrollIntoView({ behavior: "smooth" });

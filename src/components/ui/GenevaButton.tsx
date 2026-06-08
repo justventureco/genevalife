@@ -21,8 +21,8 @@ const variants: Record<Variant, string> = {
   peer: "border border-brick text-brick bg-transparent hover:bg-brick hover:text-white",
   // Sunset border + sunset text on dark; gradient sweep + white text on hover.
   "ghost-sunset": "border border-sunset text-sunset bg-transparent hover:text-white",
-  // White border + white text on dark; gradient sweep on hover.
-  "outline-white": "border border-white text-white bg-transparent hover:text-white",
+  // White border + white text on dark; gradient sweep on hover, border removed on hover.
+  "outline-white": "border border-white text-white bg-transparent hover:text-white hover:border-transparent",
 };
 
 const sizes: Record<Size, string> = {

@@ -24,7 +24,7 @@ export function GlobalFootprint() {
           <EyebrowLabel className="text-sunset">Global Footprint</EyebrowLabel>
           <h2
             className="mt-6 font-display font-medium text-beige"
-            style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.25rem)", lineHeight: 1.1, letterSpacing: "-0.015em" }}
+            style={{ fontSize: "clamp(2.25rem, 4.5vw, 3.5rem)", lineHeight: 1.1, letterSpacing: "-0.015em" }}
           >
             Five offices. <span className="italic text-sunset">One</span> standard.
           </h2>

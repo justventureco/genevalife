@@ -44,9 +44,9 @@ export function Approach() {
           {pillars.map((p, i) => (
             <div
               key={i}
-              className="group border border-aubergine/10 p-10 transition-all duration-500 hover:-translate-y-1 hover:border-brick"
+              className="group border border-aubergine/10 p-10 text-center transition-all duration-500 hover:-translate-y-1 hover:border-brick"
             >
-              <HexIcon Icon={p.icon} size={56} className="text-brick" iconClassName="text-brick" />
+              <HexIcon Icon={p.icon} size={56} className="mx-auto text-brick" iconClassName="text-brick" />
               <h3 className="mt-6 font-display text-[24px] font-medium text-aubergine md:text-[28px]">
                 {p.title}
               </h3>

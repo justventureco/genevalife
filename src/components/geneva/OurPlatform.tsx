@@ -71,9 +71,9 @@ export function OurPlatform() {
           {tiles.map((t, i) => (
             <div
               key={i}
-              className="group border border-aubergine/15 bg-transparent p-10 transition-all duration-500 hover:-translate-y-1 hover:border-brick"
+              className="group border border-aubergine/15 bg-transparent p-10 text-center transition-all duration-500 hover:-translate-y-1 hover:border-brick"
             >
-              <HexIcon Icon={t.Icon} size={64} strokeColor="currentColor" className="mb-6 text-brick" iconClassName="text-brick" />
+              <HexIcon Icon={t.Icon} size={64} strokeColor="currentColor" className="mx-auto mb-6 text-brick" iconClassName="text-brick" />
               <h3 className="font-display text-[24px] font-medium text-aubergine">
                 {t.titleLines.map((line, li) => (
                   <span key={li}>

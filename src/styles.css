@@ -10,7 +10,7 @@
   --radius-lg: 2px;
   --radius-xl: 4px;
 
-  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-display: "Playfair Display", ui-serif, Georgia, serif;
   --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
 
   --color-aubergine: var(--aubergine);

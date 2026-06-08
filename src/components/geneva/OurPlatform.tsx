@@ -56,7 +56,7 @@ export function OurPlatform() {
             className="mt-6 font-display font-medium text-beige"
             style={{ fontSize: "clamp(2.25rem, 4.5vw, 3.5rem)", lineHeight: 1.1, letterSpacing: "-0.015em" }}
           >
-            A platform you can <span className="italic text-brick">stand behind</span>.
+            A platform you can <span className="italic text-sunset">stand behind</span>.
           </h2>
           <p className="mx-auto mt-8 max-w-[760px] text-[18px] leading-[1.6] text-beige/85">
             Geneva Life Holdings combines the focus of a specialist with the discipline of an
@@ -73,7 +73,7 @@ export function OurPlatform() {
               key={i}
               className="group border border-beige/15 bg-transparent p-10 transition-all duration-500 hover:-translate-y-1 hover:border-sunset"
             >
-              <HexIcon Icon={t.Icon} size={64} strokeColor="currentColor" className="mb-6 text-sunset" iconClassName="text-sunset" />
+              <HexIcon Icon={t.Icon} size={64} strokeColor="currentColor" className="mb-6 text-white" iconClassName="text-white" />
               <h3 className="font-display text-[24px] font-medium text-beige">
                 {t.titleLines.map((line, li) => (
                   <span key={li}>

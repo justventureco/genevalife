@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { EyebrowLabel } from "@/components/ui/EyebrowLabel";
 import { GenevaButton } from "@/components/ui/GenevaButton";
+import heroEstate from "@/assets/hex-family.jpg";
 
 export function Hero() {
   return (

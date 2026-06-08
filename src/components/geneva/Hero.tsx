@@ -58,16 +58,21 @@ export function Hero() {
         </div>
 
         <motion.div
-          className="relative hidden lg:block"
+          className="relative hidden lg:flex lg:items-center lg:justify-center"
           initial={{ opacity: 0, scale: 0.96, y: 24 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.5, ease: "easeOut" }}
         >
-          <div className="relative overflow-hidden rounded-[2rem] shadow-2xl ring-1 ring-beige/10">
+          <div className="relative w-full max-w-[420px] overflow-hidden rounded-[2rem] shadow-2xl ring-1 ring-beige/10"
+               style={{
+                 maskImage: "radial-gradient(ellipse 85% 85% at center, black 55%, transparent 100%)",
+                 WebkitMaskImage: "radial-gradient(ellipse 85% 85% at center, black 55%, transparent 100%)",
+               }}
+          >
             <img
               src={heroEstate}
               alt="A multi-generational family walking together on the grounds of their family estate at golden hour"
-              className="h-[560px] w-full object-cover"
+              className="h-[440px] w-full object-cover"
               loading="eager"
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-aubergine/40 via-transparent to-transparent" />

@@ -43,7 +43,7 @@ export function OurPlatform() {
       as="section"
       id="platform"
       ariaLabel="Our platform"
-      className="relative isolate overflow-hidden bg-beige py-32 md:py-40"
+      className="relative isolate overflow-hidden bg-white py-32 md:py-40"
     >
       <div aria-hidden className="pointer-events-none absolute -bottom-24 -right-24 opacity-[0.05]">
         <img src={genevaGMark} alt="" className="h-auto w-[520px]" />
@@ -73,7 +73,7 @@ export function OurPlatform() {
               key={i}
               className="group border border-aubergine/15 bg-transparent p-10 transition-all duration-500 hover:-translate-y-1 hover:border-brick"
             >
-              <HexIcon Icon={t.Icon} size={64} strokeColor="currentColor" className="mb-6 text-aubergine" iconClassName="text-aubergine" />
+              <HexIcon Icon={t.Icon} size={64} strokeColor="currentColor" className="mb-6 text-brick" iconClassName="text-brick" />
               <h3 className="font-display text-[24px] font-medium text-aubergine">
                 {t.titleLines.map((line, li) => (
                   <span key={li}>

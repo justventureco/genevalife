@@ -40,7 +40,7 @@ export function WhoWeAre() {
               style={{ fontSize: "24px", lineHeight: 1.4, letterSpacing: "-0.01em" }}
             >
               The families and advisors we serve are sophisticated. The platform serving them is built
-              to match.
+              to&nbsp;match.
             </p>
           </div>
         </div>

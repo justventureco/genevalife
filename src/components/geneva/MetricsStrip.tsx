@@ -16,7 +16,13 @@ export function MetricsStrip() {
             <div key={i} className="flex flex-col items-center text-center md:px-4">
               <div
                 className="font-display font-medium text-brick"
-                style={{ fontSize: "clamp(2.5rem, 5vw, 3.5rem)", lineHeight: 1, letterSpacing: "-0.03em" }}
+                style={{
+                  fontSize: "clamp(2.5rem, 5vw, 3.5rem)",
+                  lineHeight: 1,
+                  letterSpacing: "-0.03em",
+                  fontVariantNumeric: "lining-nums",
+                  fontFeatureSettings: '"lnum" 1',
+                }}
               >
                 {m.value}
               </div>

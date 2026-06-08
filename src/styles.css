@@ -10,7 +10,7 @@
   --radius-lg: 2px;
   --radius-xl: 4px;
 
-  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-display: "Playfair Display", ui-serif, Georgia, serif;
   --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
 
   --color-aubergine: var(--aubergine);
@@ -46,11 +46,11 @@
   --radius: 2px;
 
   /* Geneva brand palette */
-  --aubergine: oklch(0.255 0.072 18);
-  --brick: oklch(0.555 0.215 31);
-  --sunset: oklch(0.75 0.155 50);
-  --wine: oklch(0.345 0.115 22);
-  --beige: oklch(0.91 0.012 40);
+  --aubergine: oklch(0.2516 0.0663 20.40);
+  --brick: oklch(0.5703 0.2098 32.55);
+  --sunset: oklch(0.7857 0.1434 56.17);
+  --wine: oklch(0.3630 0.1066 21.22);
+  --beige: oklch(0.9124 0.0120 51.31);
   --beige-warm: oklch(0.86 0.012 50);
 
   --gradient-brand: linear-gradient(135deg, #6B2024 0%, #D72C06 50%, #FE9F56 100%);
@@ -98,7 +98,6 @@
     font-family: var(--font-display);
     font-weight: 500;
     letter-spacing: -0.015em;
-    font-variation-settings: "SOFT" 50, "opsz" 144;
   }
 
   :focus-visible {

@@ -43,22 +43,22 @@ export function OurPlatform() {
       as="section"
       id="platform"
       ariaLabel="Our platform"
-      className="relative isolate overflow-hidden bg-aubergine py-32 md:py-40"
+      className="relative isolate overflow-hidden bg-beige py-32 md:py-40"
     >
-      <div aria-hidden className="pointer-events-none absolute -bottom-24 -right-24 opacity-[0.07]">
+      <div aria-hidden className="pointer-events-none absolute -bottom-24 -right-24 opacity-[0.05]">
         <img src={genevaGMark} alt="" className="h-auto w-[520px]" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 md:px-10">
         <div className="mx-auto max-w-[800px] text-center">
-          <EyebrowLabel className="text-sunset">The Platform</EyebrowLabel>
+          <EyebrowLabel className="text-brick">The Platform</EyebrowLabel>
           <h2
-            className="mt-6 font-display font-medium text-beige"
+            className="mt-6 font-display font-medium text-aubergine"
             style={{ fontSize: "clamp(2.25rem, 4.5vw, 3.5rem)", lineHeight: 1.1, letterSpacing: "-0.015em" }}
           >
-            A platform you can <span className="italic text-sunset">stand behind</span>.
+            A platform you can <span className="italic text-brick">stand behind</span>.
           </h2>
-          <p className="mx-auto mt-8 max-w-[760px] text-[18px] leading-[1.6] text-beige/85">
+          <p className="mx-auto mt-8 max-w-[760px] text-[18px] leading-[1.6] text-aubergine/80">
             Geneva Life Holdings combines the focus of a specialist with the discipline of an
             institution. We are led by an executive team that is directly accessible to the partners
             and families we serve.

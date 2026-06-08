@@ -23,8 +23,8 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-aubergine/60 via-transparent to-transparent" />
       </div>
 
-      <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 px-6 md:px-10 lg:grid-cols-2 lg:gap-16">
-        <div className="max-w-[640px] pb-28 lg:pb-0">
+      <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 px-6 md:px-10">
+        <div className="max-w-[760px] pb-28 lg:pb-0">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}

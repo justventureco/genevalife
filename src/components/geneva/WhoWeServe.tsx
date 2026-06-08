@@ -64,29 +64,31 @@ export function WhoWeServe() {
 
         <div className="mt-16 grid grid-cols-1 gap-12 md:mt-20 md:grid-cols-2 md:gap-0">
           {columns.map((c, i) => (
-            <div key={c.tag} className={i === 0 ? "md:pr-12 md:border-r md:border-brick/20" : "md:pl-12"}>
-              <p
-                className="font-sans text-[12px] font-medium uppercase text-brick"
-                style={{ letterSpacing: "0.16em" }}
-              >
-                {c.tag}
-              </p>
-              <h3
-                className="mt-5 font-display text-[26px] font-medium text-aubergine md:text-[32px]"
-                style={{ lineHeight: 1.2 }}
-              >
-                {c.heading}
-              </h3>
-              <p className="mt-6 text-[17px] leading-[1.65] text-aubergine/85">{c.body}</p>
+            <div key={c.tag} className={`flex flex-col ${i === 0 ? "md:pr-12 md:border-r md:border-brick/20" : "md:pl-12"}`}>
+              <div className="flex-1">
+                <p
+                  className="font-sans text-[12px] font-medium uppercase text-brick"
+                  style={{ letterSpacing: "0.16em" }}
+                >
+                  {c.tag}
+                </p>
+                <h3
+                  className="mt-5 font-display text-[26px] font-medium text-aubergine md:text-[32px]"
+                  style={{ lineHeight: 1.2 }}
+                >
+                  {c.heading}
+                </h3>
+                <p className="mt-6 text-[17px] leading-[1.65] text-aubergine/85">{c.body}</p>
 
-              <ul className="mt-8 space-y-4">
-                {c.proof.map((p) => (
-                  <li key={p} className="flex items-start gap-3 text-[16px] leading-[1.55] text-aubergine">
-                    <Check size={14} strokeWidth={2.5} className="mt-1.5 shrink-0 text-brick" />
-                    <span>{p}</span>
-                  </li>
-                ))}
-              </ul>
+                <ul className="mt-8 space-y-4">
+                  {c.proof.map((p) => (
+                    <li key={p} className="flex items-start gap-3 text-[16px] leading-[1.55] text-aubergine">
+                      <Check size={14} strokeWidth={2.5} className="mt-1.5 shrink-0 text-brick" />
+                      <span>{p}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
               <div className="mt-10">
                 <GenevaButton href={c.cta.href} variant={c.cta.variant}>

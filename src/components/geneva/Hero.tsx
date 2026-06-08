@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { EyebrowLabel } from "@/components/ui/EyebrowLabel";
 import { GenevaButton } from "@/components/ui/GenevaButton";
+import heroEstate from "@/assets/hex-family.jpg";
 
 export function Hero() {
   return (
@@ -10,8 +11,8 @@ export function Hero() {
       aria-labelledby="hero-heading"
     >
 
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 md:px-10">
-        <div className="max-w-[640px] pb-28">
+      <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 px-6 md:px-10 lg:grid-cols-2 lg:gap-16">
+        <div className="max-w-[640px] pb-28 lg:pb-0">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -55,7 +56,25 @@ export function Hero() {
             </GenevaButton>
           </motion.div>
         </div>
+
+        <motion.div
+          className="relative hidden lg:block"
+          initial={{ opacity: 0, scale: 0.96, y: 24 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 0.5, ease: "easeOut" }}
+        >
+          <div className="relative overflow-hidden rounded-[2rem] shadow-2xl ring-1 ring-beige/10">
+            <img
+              src={heroEstate}
+              alt="A multi-generational family walking together on the grounds of their family estate at golden hour"
+              className="h-[560px] w-full object-cover"
+              loading="eager"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-aubergine/40 via-transparent to-transparent" />
+          </div>
+        </motion.div>
       </div>
+
 
       {/* Scroll indicator */}
       <div

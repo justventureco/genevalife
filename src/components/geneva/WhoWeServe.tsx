@@ -58,7 +58,9 @@ export function WhoWeServe() {
             className="mt-6 font-display font-medium text-aubergine"
             style={{ fontSize: "clamp(2.25rem, 4.5vw, 3.5rem)", lineHeight: 1.1, letterSpacing: "-0.015em" }}
           >
-            Two audiences. One <span className="italic text-brick">standard</span> of partnership.
+            Two audiences.{" "}
+            <br />
+            One <span className="italic text-brick">standard</span> of partnership.
           </h2>
         </div>
 

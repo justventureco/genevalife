@@ -50,7 +50,7 @@ export function Process() {
               <div className="md:col-span-2">
                 <div
                   className="font-display font-medium text-brick pb-2"
-                  style={{ fontSize: "clamp(3.5rem, 8vw, 6.25rem)", letterSpacing: "-0.04em", lineHeight: 1 }}
+                  style={{ fontSize: "clamp(3.5rem, 8vw, 6.25rem)", letterSpacing: "-0.04em", lineHeight: 1, fontVariantNumeric: "lining-nums", fontFeatureSettings: "'lnum' 1" }}
                 >
                   {s.n}
                 </div>

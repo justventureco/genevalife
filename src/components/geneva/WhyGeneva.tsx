@@ -39,7 +39,9 @@ export function WhyGeneva() {
             className="mt-6 font-display font-medium text-beige"
             style={{ fontSize: "clamp(2.25rem, 4.5vw, 3.5rem)", lineHeight: 1.1, letterSpacing: "-0.015em" }}
           >
-            One institution. <span className="italic text-sunset">Multiple</span> operating businesses.
+            One institution.{" "}
+            <br />
+            <span className="italic text-sunset">Multiple</span> operating businesses.
           </h2>
           <p className="mx-auto max-w-[760px] mt-8 text-[18px] leading-[1.6] text-beige/85">
             Geneva Life Holdings is a holding company. Operating businesses, under common ownership,

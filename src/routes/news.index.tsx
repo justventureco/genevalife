@@ -1,4 +1,4 @@
-import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { Search } from "lucide-react";
 import { Navigation } from "@/components/geneva/Navigation";
 import { Footer } from "@/components/geneva/Footer";

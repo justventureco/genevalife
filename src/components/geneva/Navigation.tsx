@@ -41,10 +41,17 @@ export function Navigation() {
         <ul className="hidden items-center gap-8 lg:flex">
           {NAV_LINKS.map((l) => (
             <li key={l.href}>
-              <a href={l.href} className={navLinkCls}>
-                {l.label}
-                <NavUnderline />
-              </a>
+              {isHome ? (
+                <a href={l.href} className={navLinkCls}>
+                  {l.label}
+                  <NavUnderline />
+                </a>
+              ) : (
+                <Link to="/" hash={l.href.replace("#", "")} className={navLinkCls}>
+                  {l.label}
+                  <NavUnderline />
+                </Link>
+              )}
             </li>
           ))}
           <li>

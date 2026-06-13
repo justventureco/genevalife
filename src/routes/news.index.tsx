@@ -5,24 +5,21 @@ import { Navigation } from "@/components/geneva/Navigation";
 import { Footer } from "@/components/geneva/Footer";
 import { EyebrowLabel } from "@/components/ui/EyebrowLabel";
 import { NewsCard } from "@/components/geneva/NewsCard";
-import { newsData, NEWS_TYPES, type NewsType, type NewsTopic } from "@/lib/news";
+import {
+  newsData,
+  NEWS_TYPES,
+  NEWS_TOPICS,
+  type NewsType,
+  type NewsTopic,
+} from "@/lib/news";
 
 const PER_PAGE = 12;
 
-type TopicKey = "all" | "regulatory" | "wealth-structuring" | "platform" | "perspective";
 type SortKey = "recent" | "oldest";
-
-const TOPIC_OPTIONS: { key: TopicKey; label: string; value: NewsTopic | null }[] = [
-  { key: "all", label: "All Topics", value: null },
-  { key: "regulatory", label: "Regulatory & Compliance", value: "Regulatory & Compliance" },
-  { key: "wealth-structuring", label: "Wealth Structuring", value: "Wealth Structuring" },
-  { key: "platform", label: "Platform News", value: "Platform News" },
-  { key: "perspective", label: "Industry Perspective", value: "Industry Perspective" },
-];
 
 type NewsSearch = {
   types: NewsType[];
-  topic: TopicKey;
+  topics: NewsTopic[];
   sort: SortKey;
   q: string;
   page: number;
@@ -32,14 +29,15 @@ function asTypes(v: unknown): NewsType[] {
   const arr = Array.isArray(v) ? v : typeof v === "string" && v ? v.split(",") : [];
   return arr.filter((t): t is NewsType => NEWS_TYPES.includes(t as NewsType));
 }
-function asTopicKey(v: unknown): TopicKey {
-  return TOPIC_OPTIONS.some((p) => p.key === v) ? (v as TopicKey) : "all";
+function asTopics(v: unknown): NewsTopic[] {
+  const arr = Array.isArray(v) ? v : typeof v === "string" && v ? v.split(",") : [];
+  return arr.filter((t): t is NewsTopic => NEWS_TOPICS.includes(t as NewsTopic));
 }
 
 export const Route = createFileRoute("/news/")({
   validateSearch: (search: Record<string, unknown>): NewsSearch => ({
     types: asTypes(search.types),
-    topic: asTopicKey(search.topic),
+    topics: asTopics(search.topics),
     sort: search.sort === "oldest" ? "oldest" : "recent",
     q: typeof search.q === "string" ? search.q : "",
     page: Math.max(1, Number(search.page) || 1),
@@ -62,12 +60,18 @@ export const Route = createFileRoute("/news/")({
   component: NewsArchive,
 });
 
-function TypeDropdown({
+function CheckboxDropdown<T extends string>({
+  label,
+  allLabel,
+  options,
   selected,
   onChange,
 }: {
-  selected: NewsType[];
-  onChange: (next: NewsType[]) => void;
+  label: string;
+  allLabel: string;
+  options: readonly T[];
+  selected: T[];
+  onChange: (next: T[]) => void;
 }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -80,47 +84,47 @@ function TypeDropdown({
     return () => document.removeEventListener("mousedown", onDoc);
   }, []);
 
-  const allSelected = selected.length === 0 || selected.length === NEWS_TYPES.length;
-  const label =
+  const allSelected = selected.length === 0 || selected.length === options.length;
+  const buttonLabel =
     allSelected
-      ? "All Types"
+      ? allLabel
       : selected.length === 1
         ? selected[0]
         : `${selected.length} selected`;
 
-  const toggle = (t: NewsType) => {
+  const toggle = (t: T) => {
     const base = allSelected ? [] : selected;
     const next = base.includes(t) ? base.filter((x) => x !== t) : [...base, t];
-    onChange(next.length === NEWS_TYPES.length ? [] : next);
+    onChange(next.length === options.length ? [] : next);
   };
 
   return (
     <div ref={ref} className="relative">
       <label className="flex items-center gap-2 text-[12px] uppercase text-aubergine/60" style={{ letterSpacing: "0.12em" }}>
-        Type
+        {label}
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
           className="flex min-w-[160px] items-center justify-between gap-3 border-0 border-b border-aubergine/20 bg-transparent py-2 px-3 font-sans text-[14px] normal-case tracking-normal text-aubergine outline-none transition-colors hover:border-brick"
         >
-          {label}
+          {buttonLabel}
           <ChevronDown size={14} className={`transition-transform ${open ? "rotate-180" : ""}`} />
         </button>
       </label>
 
       {open && (
-        <div className="absolute left-0 top-full z-40 mt-1 w-[220px] rounded-none border border-aubergine/15 bg-white py-1 shadow-lg">
+        <div className="absolute left-0 top-full z-40 mt-1 w-[240px] rounded-none border border-aubergine/15 bg-white py-1 shadow-lg">
           <button
             type="button"
             onClick={() => onChange([])}
             className="flex w-full items-center gap-3 px-4 py-2 text-left font-sans text-[14px] text-aubergine transition-colors hover:bg-beige"
           >
-            <span className="flex h-4 w-4 items-center justify-center border border-aubergine/40">
+            <span className="flex h-4 w-4 shrink-0 items-center justify-center border border-aubergine/40">
               {allSelected && <Check size={12} className="text-brick" />}
             </span>
-            All
+            {allLabel}
           </button>
-          {NEWS_TYPES.map((t) => {
+          {options.map((t) => {
             const checked = !allSelected && selected.includes(t);
             return (
               <button
@@ -129,7 +133,7 @@ function TypeDropdown({
                 onClick={() => toggle(t)}
                 className="flex w-full items-center gap-3 px-4 py-2 text-left font-sans text-[14px] text-aubergine transition-colors hover:bg-beige"
               >
-                <span className="flex h-4 w-4 items-center justify-center border border-aubergine/40">
+                <span className="flex h-4 w-4 shrink-0 items-center justify-center border border-aubergine/40">
                   {checked && <Check size={12} className="text-brick" />}
                 </span>
                 {t}
@@ -152,13 +156,13 @@ function NewsArchive() {
     });
   };
 
-  const topicValue = TOPIC_OPTIONS.find((p) => p.key === search.topic)?.value ?? null;
   const query = search.q.trim().toLowerCase();
   const typesActive = search.types.length > 0 && search.types.length < NEWS_TYPES.length;
+  const topicsActive = search.topics.length > 0 && search.topics.length < NEWS_TOPICS.length;
 
   const filtered = newsData
     .filter((a) => (typesActive ? search.types.includes(a.type) : true))
-    .filter((a) => (topicValue ? a.topic === topicValue : true))
+    .filter((a) => (topicsActive ? search.topics.includes(a.topic) : true))
     .filter((a) =>
       query
         ? a.headline.toLowerCase().includes(query) ||
@@ -197,28 +201,24 @@ function NewsArchive() {
           </div>
         </section>
 
-        {/* Filter & sort bar */}
+        {/* Filter, sort & search bar */}
         <div className="sticky top-20 z-30 border-y border-aubergine/10 bg-white py-6">
-          <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-6 px-6 md:px-10">
-            <TypeDropdown
+          <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-8 gap-y-4 px-6 md:px-10">
+            <CheckboxDropdown
+              label="Type"
+              allLabel="All Types"
+              options={NEWS_TYPES}
               selected={search.types}
               onChange={(next) => update({ types: next })}
             />
 
-            <label className="flex items-center gap-2 text-[12px] uppercase text-aubergine/60" style={{ letterSpacing: "0.12em" }}>
-              Topic
-              <select
-                className={selectCls}
-                value={search.topic}
-                onChange={(e) => update({ topic: e.target.value as TopicKey })}
-              >
-                {TOPIC_OPTIONS.map((o) => (
-                  <option key={o.key} value={o.key}>
-                    {o.label}
-                  </option>
-                ))}
-              </select>
-            </label>
+            <CheckboxDropdown
+              label="Topic"
+              allLabel="All Topics"
+              options={NEWS_TOPICS}
+              selected={search.topics}
+              onChange={(next) => update({ topics: next })}
+            />
 
             <label className="flex items-center gap-2 text-[12px] uppercase text-aubergine/60" style={{ letterSpacing: "0.12em" }}>
               Sort
@@ -231,13 +231,8 @@ function NewsArchive() {
                 <option value="oldest">Oldest First</option>
               </select>
             </label>
-          </div>
-        </div>
 
-        {/* Search */}
-        <div className="mx-auto max-w-6xl px-6 md:px-10">
-          <div className="mt-8 flex justify-end">
-            <div className="relative w-full max-w-[360px]">
+            <div className="relative ml-auto w-full max-w-[280px]">
               <Search size={16} className="pointer-events-none absolute left-0 top-1/2 -translate-y-1/2 text-aubergine/40" />
               <input
                 type="text"
@@ -257,7 +252,7 @@ function NewsArchive() {
               <p className="font-display text-[24px] text-aubergine">No articles match these filters.</p>
               <button
                 type="button"
-                onClick={() => navigate({ search: { types: [], topic: "all", sort: "recent", q: "", page: 1 } })}
+                onClick={() => navigate({ search: { types: [], topics: [], sort: "recent", q: "", page: 1 } })}
                 className="mt-4 font-sans text-[14px] font-medium text-brick underline decoration-brick decoration-1 underline-offset-4 transition-colors hover:text-sunset"
               >
                 Clear filters

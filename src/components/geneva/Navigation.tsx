@@ -34,17 +34,30 @@ export function Navigation() {
         className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 md:h-20 md:px-10"
       >
         {/* Replace with actual Geneva SVG logo */}
-        <a href="#top" aria-label="Geneva Life Holdings home" className="flex items-center">
-          <img src={genevaLogo} alt="Geneva" className="h-12 w-auto md:h-14" />
-        </a>
+        {isHome ? (
+          <a href="#top" aria-label="Geneva Life Holdings home" className="flex items-center">
+            <img src={genevaLogo} alt="Geneva" className="h-12 w-auto md:h-14" />
+          </a>
+        ) : (
+          <Link to="/" aria-label="Geneva Life Holdings home" className="flex items-center">
+            <img src={genevaLogo} alt="Geneva" className="h-12 w-auto md:h-14" />
+          </Link>
+        )}
 
         <ul className="hidden items-center gap-8 lg:flex">
           {NAV_LINKS.map((l) => (
             <li key={l.href}>
-              <a href={l.href} className={navLinkCls}>
-                {l.label}
-                <NavUnderline />
-              </a>
+              {isHome ? (
+                <a href={l.href} className={navLinkCls}>
+                  {l.label}
+                  <NavUnderline />
+                </a>
+              ) : (
+                <Link to="/" hash={l.href.replace("#", "")} className={navLinkCls}>
+                  {l.label}
+                  <NavUnderline />
+                </Link>
+              )}
             </li>
           ))}
           <li>
@@ -63,7 +76,7 @@ export function Navigation() {
         </ul>
 
         <div className="hidden lg:block">
-          <GenevaButton href="#contact" variant="outline-white" size="compact">
+          <GenevaButton href={isHome ? "#contact" : "/#contact"} variant="outline-white" size="compact">
             Get in Touch
           </GenevaButton>
         </div>
@@ -88,13 +101,24 @@ export function Navigation() {
         <ul className="flex h-full flex-col items-start gap-8 px-8 pt-16">
           {NAV_LINKS.map((l) => (
             <li key={l.href}>
-              <a
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="font-display text-[32px] font-medium text-beige"
-              >
-                {l.label}
-              </a>
+              {isHome ? (
+                <a
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  className="font-display text-[32px] font-medium text-beige"
+                >
+                  {l.label}
+                </a>
+              ) : (
+                <Link
+                  to="/"
+                  hash={l.href.replace("#", "")}
+                  onClick={() => setOpen(false)}
+                  className="font-display text-[32px] font-medium text-beige"
+                >
+                  {l.label}
+                </Link>
+              )}
             </li>
           ))}
           <li>
@@ -117,7 +141,7 @@ export function Navigation() {
             )}
           </li>
           <li className="pt-4">
-            <GenevaButton href="#contact" variant="outline-white" size="default">
+            <GenevaButton href={isHome ? "#contact" : "/#contact"} variant="outline-white" size="default">
               Get in Touch
             </GenevaButton>
           </li>

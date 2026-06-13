@@ -47,6 +47,7 @@ function Index() {
         <WhoWeServe />
         <Process />
         <GlobalFootprint />
+        <NewsPreview />
         <Contact />
       </main>
       <Footer />

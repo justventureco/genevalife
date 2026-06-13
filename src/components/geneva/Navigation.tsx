@@ -61,17 +61,10 @@ export function Navigation() {
             </li>
           ))}
           <li>
-            {isHome ? (
-              <a href="#news" className={navLinkCls}>
-                News &amp; Press
-                <NavUnderline />
-              </a>
-            ) : (
-              <Link to="/news" className={navLinkCls}>
-                News &amp; Press
-                <NavUnderline />
-              </Link>
-            )}
+            <Link to="/news" className={navLinkCls}>
+              News &amp; Press
+              <NavUnderline />
+            </Link>
           </li>
         </ul>
 

@@ -75,7 +75,7 @@ function NewsArchive() {
 
   const update = (patch: Partial<NewsSearch>) => {
     navigate({
-      search: (prev) => ({ ...prev, ...patch, page: patch.page ?? 1 }),
+      search: (prev: NewsSearch) => ({ ...prev, ...patch, page: patch.page ?? 1 }),
     });
   };
 

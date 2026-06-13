@@ -1,12 +1,24 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { GenevaButton } from "@/components/ui/GenevaButton";
 import { cn } from "@/lib/utils";
 import { NAV_LINKS } from "@/lib/constants";
 import genevaLogo from "@/assets/geneva-logo-inverted.png";
 
+const navLinkCls =
+  "group relative inline-block text-[14px] text-beige/80 transition-colors hover:text-beige";
+
+function NavUnderline() {
+  return (
+    <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-sunset transition-transform duration-300 group-hover:scale-x-100" />
+  );
+}
+
 export function Navigation() {
   const [open, setOpen] = useState(false);
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const isHome = pathname === "/";
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -29,15 +41,25 @@ export function Navigation() {
         <ul className="hidden items-center gap-8 lg:flex">
           {NAV_LINKS.map((l) => (
             <li key={l.href}>
-              <a
-                href={l.href}
-                className="group relative inline-block text-[14px] text-beige/80 transition-colors hover:text-beige"
-              >
+              <a href={l.href} className={navLinkCls}>
                 {l.label}
-                <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-sunset transition-transform duration-300 group-hover:scale-x-100" />
+                <NavUnderline />
               </a>
             </li>
           ))}
+          <li>
+            {isHome ? (
+              <a href="#news" className={navLinkCls}>
+                News &amp; Press
+                <NavUnderline />
+              </a>
+            ) : (
+              <Link to="/news" className={navLinkCls}>
+                News &amp; Press
+                <NavUnderline />
+              </Link>
+            )}
+          </li>
         </ul>
 
         <div className="hidden lg:block">
@@ -75,6 +97,25 @@ export function Navigation() {
               </a>
             </li>
           ))}
+          <li>
+            {isHome ? (
+              <a
+                href="#news"
+                onClick={() => setOpen(false)}
+                className="font-display text-[32px] font-medium text-beige"
+              >
+                News &amp; Press
+              </a>
+            ) : (
+              <Link
+                to="/news"
+                onClick={() => setOpen(false)}
+                className="font-display text-[32px] font-medium text-beige"
+              >
+                News &amp; Press
+              </Link>
+            )}
+          </li>
           <li className="pt-4">
             <GenevaButton href="#contact" variant="outline-white" size="default">
               Get in Touch

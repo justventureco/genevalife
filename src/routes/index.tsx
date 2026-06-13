@@ -9,6 +9,7 @@ import { WhoWeServe } from "@/components/geneva/WhoWeServe";
 import { WhyGeneva } from "@/components/geneva/WhyGeneva";
 import { Process } from "@/components/geneva/Process";
 import { GlobalFootprint } from "@/components/geneva/GlobalFootprint";
+import { NewsPreview } from "@/components/geneva/NewsPreview";
 import { Contact } from "@/components/geneva/Contact";
 import { Footer } from "@/components/geneva/Footer";
 
@@ -46,6 +47,7 @@ function Index() {
         <WhoWeServe />
         <Process />
         <GlobalFootprint />
+        <NewsPreview />
         <Contact />
       </main>
       <Footer />

@@ -2,7 +2,7 @@ import { EyebrowLabel } from "@/components/ui/EyebrowLabel";
 import genevaLogo from "@/assets/geneva-logo-inverted.png";
 import { NAV_LINKS, CONTACT } from "@/lib/constants";
 
-const navLinks = [...NAV_LINKS, { label: "Contact", href: "#contact" }];
+const navLinks = [...NAV_LINKS, { label: "News & Press", href: "/news" }, { label: "Contact", href: "#contact" }];
 
 export function Footer() {
   return (

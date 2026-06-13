@@ -28,7 +28,7 @@ export function Navigation() {
   }, [open]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-beige/10 bg-aubergine/95 backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-beige/10 bg-aubergine">
       <nav
         aria-label="Primary"
         className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 md:h-20 md:px-10"

@@ -115,23 +115,13 @@ export function Navigation() {
             </li>
           ))}
           <li>
-            {isHome ? (
-              <a
-                href="#news"
-                onClick={() => setOpen(false)}
-                className="font-display text-[32px] font-medium text-beige"
-              >
-                News &amp; Press
-              </a>
-            ) : (
-              <Link
-                to="/news"
-                onClick={() => setOpen(false)}
-                className="font-display text-[32px] font-medium text-beige"
-              >
-                News &amp; Press
-              </Link>
-            )}
+            <Link
+              to="/news"
+              onClick={() => setOpen(false)}
+              className="font-display text-[32px] font-medium text-beige"
+            >
+              News &amp; Press
+            </Link>
           </li>
           <li className="pt-4">
             <GenevaButton href={isHome ? "#contact" : "/#contact"} variant="outline-white" size="default">

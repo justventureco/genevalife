@@ -101,13 +101,24 @@ export function Navigation() {
         <ul className="flex h-full flex-col items-start gap-8 px-8 pt-16">
           {NAV_LINKS.map((l) => (
             <li key={l.href}>
-              <a
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="font-display text-[32px] font-medium text-beige"
-              >
-                {l.label}
-              </a>
+              {isHome ? (
+                <a
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  className="font-display text-[32px] font-medium text-beige"
+                >
+                  {l.label}
+                </a>
+              ) : (
+                <Link
+                  to="/"
+                  hash={l.href.replace("#", "")}
+                  onClick={() => setOpen(false)}
+                  className="font-display text-[32px] font-medium text-beige"
+                >
+                  {l.label}
+                </Link>
+              )}
             </li>
           ))}
           <li>

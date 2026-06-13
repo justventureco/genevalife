@@ -76,7 +76,7 @@ export function Navigation() {
         </ul>
 
         <div className="hidden lg:block">
-          <GenevaButton href="#contact" variant="outline-white" size="compact">
+          <GenevaButton href={isHome ? "#contact" : "/#contact"} variant="outline-white" size="compact">
             Get in Touch
           </GenevaButton>
         </div>

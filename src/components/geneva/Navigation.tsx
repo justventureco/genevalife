@@ -141,7 +141,7 @@ export function Navigation() {
             )}
           </li>
           <li className="pt-4">
-            <GenevaButton href="#contact" variant="outline-white" size="default">
+            <GenevaButton href={isHome ? "#contact" : "/#contact"} variant="outline-white" size="default">
               Get in Touch
             </GenevaButton>
           </li>

@@ -13,7 +13,7 @@ export function NewsPreview() {
       as="section"
       id="news"
       ariaLabel="News and press"
-      className="bg-beige-warm py-32 md:py-40"
+      className="bg-white py-32 md:py-40"
     >
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <div className="mx-auto max-w-[800px] text-center">

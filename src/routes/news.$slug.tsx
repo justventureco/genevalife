@@ -26,7 +26,7 @@ export const Route = createFileRoute("/news/$slug")({
 
 function ArticleNotFound() {
   return (
-    <div className="min-h-dvh bg-beige text-aubergine">
+    <div className="min-h-dvh bg-white text-aubergine">
       <Navigation />
       <main className="mx-auto max-w-3xl px-6 pb-32 pt-40 text-center md:px-10">
         <h1 className="font-display text-[32px] font-medium text-aubergine">Article not found.</h1>
@@ -47,7 +47,7 @@ function ArticleDetail() {
   const { article } = Route.useLoaderData();
 
   return (
-    <div className="min-h-dvh bg-beige text-aubergine">
+    <div className="min-h-dvh bg-white text-aubergine">
       <Navigation />
       <main className="pt-16 md:pt-20">
         <article className="mx-auto max-w-3xl px-6 py-20 md:px-10 md:py-28">

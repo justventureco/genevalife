@@ -3,7 +3,13 @@ import { ArrowRight } from "lucide-react";
 import type { NewsArticle } from "@/lib/news";
 import { formatNewsDate } from "@/lib/news";
 
-export function NewsCard({ article }: { article: NewsArticle }) {
+export function NewsCard({
+  article,
+  linkable = false,
+}: {
+  article: NewsArticle;
+  linkable?: boolean;
+}) {
   return (
     <article className="group flex flex-col border border-aubergine/10 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brick">
       <p
@@ -20,13 +26,17 @@ export function NewsCard({ article }: { article: NewsArticle }) {
         className="mt-4 font-display text-[22px] font-medium text-aubergine"
         style={{ lineHeight: 1.3 }}
       >
-        <Link
-          to="/news/$slug"
-          params={{ slug: article.slug }}
-          className="transition-colors hover:text-brick"
-        >
-          {article.headline}
-        </Link>
+        {linkable ? (
+          <Link
+            to="/news/$slug"
+            params={{ slug: article.slug }}
+            className="transition-colors hover:text-brick"
+          >
+            {article.headline}
+          </Link>
+        ) : (
+          article.headline
+        )}
       </h3>
 
       <p
@@ -42,19 +52,21 @@ export function NewsCard({ article }: { article: NewsArticle }) {
         {article.excerpt}
       </p>
 
-      <div className="mt-6">
-        <Link
-          to="/news/$slug"
-          params={{ slug: article.slug }}
-          className="group/link inline-flex items-center gap-1.5 font-sans text-[13px] font-medium text-brick transition-colors hover:text-sunset"
-        >
-          Read more
-          <ArrowRight
-            size={14}
-            className="transition-transform duration-300 group-hover/link:translate-x-1"
-          />
-        </Link>
-      </div>
+      {linkable && (
+        <div className="mt-6">
+          <Link
+            to="/news/$slug"
+            params={{ slug: article.slug }}
+            className="group/link inline-flex items-center gap-1.5 font-sans text-[13px] font-medium text-brick transition-colors hover:text-sunset"
+          >
+            Read more
+            <ArrowRight
+              size={14}
+              className="transition-transform duration-300 group-hover/link:translate-x-1"
+            />
+          </Link>
+        </div>
+      )}
     </article>
   );
 }

@@ -193,7 +193,9 @@ function NewsArchive() {
               className="mt-6 font-display font-medium text-beige"
               style={{ fontSize: "clamp(2.25rem, 5vw, 3.5rem)", lineHeight: 1.1, letterSpacing: "-0.015em" }}
             >
-              Insights and <span className="italic text-sunset">announcements</span> from Geneva.
+              Insights and <span className="italic text-sunset">announcements</span>
+              <br />
+              from Geneva.
             </h1>
             <p className="mx-auto mt-6 max-w-[720px] font-sans text-[18px] text-beige/80" style={{ lineHeight: 1.6 }}>
               Press releases, whitepapers, and institutional perspectives from across the platform.

@@ -9,7 +9,7 @@ const metrics = [
 
 export function MetricsStrip() {
   return (
-    <SectionReveal as="section" ariaLabel="Geneva at a glance" className="bg-beige py-16 md:py-24">
+    <SectionReveal as="section" ariaLabel="Geneva at a glance" className="bg-beige py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 md:grid-cols-4 md:gap-x-8">
           {metrics.map((m, i) => (

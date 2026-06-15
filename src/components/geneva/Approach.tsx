@@ -27,7 +27,7 @@ export function Approach() {
       as="section"
       id="approach"
       ariaLabel="Our approach"
-      className="bg-beige py-28 md:py-36"
+      className="bg-beige py-24 md:py-32"
     >
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <div className="mx-auto text-center">

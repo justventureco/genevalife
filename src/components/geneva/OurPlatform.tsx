@@ -43,7 +43,7 @@ export function OurPlatform() {
       as="section"
       id="platform"
       ariaLabel="Our platform"
-      className="relative isolate overflow-hidden bg-white py-32 md:py-40"
+      className="relative isolate overflow-hidden bg-white py-24 md:py-32"
     >
       <div aria-hidden className="pointer-events-none absolute -bottom-24 -right-24 opacity-[0.05]">
         <img src={genevaGMark} alt="" className="h-auto w-[520px]" />

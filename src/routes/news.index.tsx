@@ -264,7 +264,11 @@ function NewsArchive() {
             <>
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 {pageItems.map((a) => (
-                  <NewsCard key={a.id} article={a} />
+                  <NewsCard
+                    key={a.id}
+                    article={a}
+                    linkable={a.slug === "geneva-expands-platform-operating-capabilities"}
+                  />
                 ))}
               </div>
 

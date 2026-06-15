@@ -17,7 +17,7 @@ export function GlobalFootprint() {
       as="section"
       id="global-footprint"
       ariaLabel="Global footprint"
-      className="bg-aubergine py-24"
+      className="bg-aubergine py-24 md:py-32"
     >
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <div className="mx-auto max-w-[720px] text-center">

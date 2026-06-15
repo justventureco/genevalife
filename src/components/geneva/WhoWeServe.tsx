@@ -49,7 +49,7 @@ export function WhoWeServe() {
       as="section"
       id="who-we-serve"
       ariaLabel="Who we serve"
-      className="bg-white py-28 md:py-36"
+      className="bg-white py-24 md:py-32"
     >
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <div className="mx-auto text-center">

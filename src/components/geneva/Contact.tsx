@@ -44,7 +44,7 @@ export function Contact() {
     "mt-2 w-full border-0 border-b border-aubergine/20 bg-transparent py-3 font-sans text-[16px] text-aubergine outline-none transition-colors focus:border-brick";
 
   return (
-    <SectionReveal as="section" id="contact" ariaLabel="Contact" className="bg-beige py-28 md:py-36">
+    <SectionReveal as="section" id="contact" ariaLabel="Contact" className="bg-beige py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <div className="grid grid-cols-1 gap-16 md:grid-cols-12 md:gap-12">
           {/* Left column */}

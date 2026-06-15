@@ -13,7 +13,7 @@ export function NewsPreview() {
       as="section"
       id="news"
       ariaLabel="News and press"
-      className="bg-white py-32 md:py-40"
+      className="bg-white py-24 md:py-32"
     >
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <div className="mx-auto max-w-[800px] text-center">
@@ -22,7 +22,9 @@ export function NewsPreview() {
             className="mt-6 font-display font-medium text-aubergine"
             style={{ fontSize: "clamp(2.25rem, 4.5vw, 3.5rem)", lineHeight: 1.1, letterSpacing: "-0.015em" }}
           >
-            Insights and <span className="italic text-brick">announcements</span> from Geneva.
+            Insights and <span className="italic text-brick">announcements</span>
+            <br />
+            from Geneva.
           </h2>
         </div>
 

@@ -41,7 +41,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
           >
-            Structure <span className="italic text-brick">Equal</span> to the Wealth It Carries.
+            Structure Equal to the <span className="italic text-brick">Wealth</span> It Carries.
           </motion.h1>
 
           <motion.p

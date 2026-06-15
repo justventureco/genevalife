@@ -30,7 +30,11 @@ export function NewsPreview() {
 
         <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-3">
           {latest.map((article) => (
-            <NewsCard key={article.id} article={article} />
+            <NewsCard
+              key={article.id}
+              article={article}
+              linkable={article.slug === "geneva-expands-platform-operating-capabilities"}
+            />
           ))}
         </div>
 
